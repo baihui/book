@@ -7,7 +7,7 @@ for f in $(ls -F |grep "/$")
       echo "$(git pull)" 
       echo "$(git add * && git commit -a -m 'publish' )" 
       echo "$(git push)" 
-      echo "$(gitbook build . ${pd})..........build完成${pd}.............."
+      echo "$(gitbook build . ${pd})"
       cd ${pd} 
       echo "$(git add $f && git commit -a -m 'publish' )" 
       echo "$(git push)"  
@@ -68,6 +68,4 @@ for f in $(ls -F |grep "/$")
 ~                                                                                                                                                                                                                                                                                         
 ~                                                                                                                                                                                                                                                                                         
 ~                                                                                                                                                                                                                                                                                         
- VISUAL  release.sh                                                                                                                                                                                                               sh  utf-8[unix]    5% ☰    1/18 ㏑ :  1  ☲ [14]trailing 
 -- 可视 --
-
