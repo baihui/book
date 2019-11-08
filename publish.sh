@@ -2,12 +2,11 @@
 pd=$(pwd) 
 for f in $(ls -F |grep "/$") 
   do 
- 
-      echo "$(cd $f )...........................${f}......................." 
+      cd ../$f 
       echo "$(git pull)" 
       echo "$(git add * && git commit -a -m 'publish' )" 
       echo "$(git push)" 
-      echo "build $(gitbook build . ${pd})/${f}"
+      gitbook build . ${pd}/${f}
  done
 
 cd ${pd}
