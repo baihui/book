@@ -1,0 +1,1081 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Optional优雅的使用null · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="joiner.html" />
+    
+    
+    <link rel="prev" href="../utils.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../nei-cun-mo-xing.html">
+            
+                <a href="../nei-cun-mo-xing.html">
+            
+                    
+                    内存模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    权限控制器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../securitymanager.html">
+            
+                <a href="../securitymanager.html">
+            
+                    
+                    SecurityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../la-ji-hui-shou-ji-zhi-de-suan-fa.html">
+            
+                <a href="../la-ji-hui-shou-ji-zhi-de-suan-fa.html">
+            
+                    
+                    垃圾回收机制的算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../classjia-zai.html">
+            
+                <a href="../classjia-zai.html">
+            
+                    
+                    Class
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../classjia-zai/mo-shu.html">
+            
+                <a href="../classjia-zai/mo-shu.html">
+            
+                    
+                    魔数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../fang-fa-qu.html">
+            
+                <a href="../fang-fa-qu.html">
+            
+                    
+                    方法区
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../classjia-zai/ban-ben/chang-liang-chi.html">
+            
+                <a href="../classjia-zai/ban-ben/chang-liang-chi.html">
+            
+                    
+                    常量池
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../classjia-zai/ban-ben.html">
+            
+                <a href="../classjia-zai/ban-ben.html">
+            
+                    
+                    版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../classjia-zai/fang-fa-qu/fang-wen-biao-zhi.html">
+            
+                <a href="../classjia-zai/fang-fa-qu/fang-wen-biao-zhi.html">
+            
+                    
+                    访问标志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../classjia-zai/jie-xi.html">
+            
+                <a href="../classjia-zai/jie-xi.html">
+            
+                    
+                    解析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../classjia-zai/dong-tai-jie-xi.html">
+            
+                <a href="../classjia-zai/dong-tai-jie-xi.html">
+            
+                    
+                    动态解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../classjia-zai/jing-tai-jie-xi.html">
+            
+                <a href="../classjia-zai/jing-tai-jie-xi.html">
+            
+                    
+                    静态解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../classjia-zai/yin-yong.html">
+            
+                <a href="../classjia-zai/yin-yong.html">
+            
+                    
+                    引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../fen-bu-shi-suo.html">
+            
+                <a href="../fen-bu-shi-suo.html">
+            
+                    
+                    分布式锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../fu-he-cao-zuo.html">
+            
+                <a href="../fu-he-cao-zuo.html">
+            
+                    
+                    符合操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../synchronized.html">
+            
+                <a href="../synchronized.html">
+            
+                    
+                    synchronized
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../lock.html">
+            
+                <a href="../lock.html">
+            
+                    
+                    Lock
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../lock/abstractqueuedsynchronizer.html">
+            
+                <a href="../lock/abstractqueuedsynchronizer.html">
+            
+                    
+                    AbstractQueuedSynchronizer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dui-xiang-tou.html">
+            
+                <a href="../dui-xiang-tou.html">
+            
+                    
+                    对象头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../zhong-duan.html">
+            
+                <a href="../zhong-duan.html">
+            
+                    
+                    中断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../suo.html">
+            
+                <a href="../suo.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../bing-fa-rong-qi-dui-lie-he-ji-he.html">
+            
+                <a href="../bing-fa-rong-qi-dui-lie-he-ji-he.html">
+            
+                    
+                    并发容器队列和集合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.html">
+            
+                <a href="../bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.html">
+            
+                    
+                    ConcurrentHashMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../locksupport.html">
+            
+                <a href="../locksupport.html">
+            
+                    
+                    LockSupport
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../executor-ren-wu-diao-du-kuang-jia.html">
+            
+                <a href="../executor-ren-wu-diao-du-kuang-jia.html">
+            
+                    
+                    Executor 任务调度框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../unsafe.html">
+            
+                <a href="../unsafe.html">
+            
+                    
+                    Unsafe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../futuretask.html">
+            
+                <a href="../futuretask.html">
+            
+                    
+                    FutureTask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../monitor.html">
+            
+                <a href="../monitor.html">
+            
+                    
+                    monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../final.html">
+            
+                <a href="../final.html">
+            
+                    
+                    final
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../condition.html">
+            
+                <a href="../condition.html">
+            
+                    
+                    Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../zhan.html">
+            
+                <a href="../zhan.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../dui.html">
+            
+                <a href="../dui.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../classloader.html">
+            
+                <a href="../classloader.html">
+            
+                    
+                    ClassLoader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../methods/zi-fu-chuan.html">
+            
+                <a href="../methods/zi-fu-chuan.html">
+            
+                    
+                    字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../fan-she.html">
+            
+                <a href="../fan-she.html">
+            
+                    
+                    反射
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../fan-she/constructor.html">
+            
+                <a href="../fan-she/constructor.html">
+            
+                    
+                    Constructor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="../fan-she/method.html">
+            
+                <a href="../fan-she/method.html">
+            
+                    
+                    Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.3" data-path="../fan-she/member.html">
+            
+                <a href="../fan-she/member.html">
+            
+                    
+                    Member
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.4" data-path="../fan-she/field.html">
+            
+                <a href="../fan-she/field.html">
+            
+                    
+                    Field
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="../modifier.html">
+            
+                <a href="../modifier.html">
+            
+                    
+                    Modifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="../methods/javayun-xing-shi-shu-ju-qu-yu.html">
+            
+                <a href="../methods/javayun-xing-shi-shu-ju-qu-yu.html">
+            
+                    
+                    运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="../ji-ben-lei-xing.html">
+            
+                <a href="../ji-ben-lei-xing.html">
+            
+                    
+                    基本类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.1" data-path="../ji-ben-lei-xing/zi-fu-yu-zi-jie.html">
+            
+                <a href="../ji-ben-lei-xing/zi-fu-yu-zi-jie.html">
+            
+                    
+                    字符与字节
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" data-path="../yun-xing-shi-huan-jing.html">
+            
+                <a href="../yun-xing-shi-huan-jing.html">
+            
+                    
+                    运行时环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.29" data-path="../jing-tai-lei.html">
+            
+                <a href="../jing-tai-lei.html">
+            
+                    
+                    静态类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.30" data-path="../xu-lie-hua.html">
+            
+                <a href="../xu-lie-hua.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.30.1" data-path="../xu-lie-hua/transient.html">
+            
+                <a href="../xu-lie-hua/transient.html">
+            
+                    
+                    transient
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.31" data-path="../zoneid.html">
+            
+                <a href="../zoneid.html">
+            
+                    
+                    ZoneId
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.32" data-path="../supplier.html">
+            
+                <a href="../supplier.html">
+            
+                    
+                    Supplier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.33" data-path="../cloneable.html">
+            
+                <a href="../cloneable.html">
+            
+                    
+                    Cloneable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.34" data-path="../spi.html">
+            
+                <a href="../spi.html">
+            
+                    
+                    SPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.35" data-path="../thread.html">
+            
+                <a href="../thread.html">
+            
+                    
+                    Thread
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.35.1" data-path="../thread/threadlocal.html">
+            
+                <a href="../thread/threadlocal.html">
+            
+                    
+                    ThreadLocal
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.35.1.1" data-path="../thread/inheritablethreadlocal.html">
+            
+                <a href="../thread/inheritablethreadlocal.html">
+            
+                    
+                    InheritableThreadLocal
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36" data-path="../utils.html">
+            
+                <a href="../utils.html">
+            
+                    
+                    utils
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.36.1" data-path="optional.html">
+            
+                <a href="optional.html">
+            
+                    
+                    Optional优雅的使用null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.36.2" data-path="joiner.html">
+            
+                <a href="joiner.html">
+            
+                    
+                    Joiner
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Optional优雅的使用null</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4F7F;&#x7528;<a href="https://github.com/google/guava" target="_blank">Optional</a><t>&#x9664;&#x4E86;&#x7B80;&#x5316;&#x7C97;&#x9C81;&#x7684;if(null == object)&#x3001;&#x964D;&#x4F4E;&#x51FD;&#x6570;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3001;&#x589E;&#x52A0;&#x53EF;&#x8BFB;&#x6027;&#x4E4B;&#x5916;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x79CD;&#x50BB;&#x74DC;&#x5F0F;&#x7684;&#x9632;&#x62A4;&#xFF0C;Optional<t>&#x5F15;&#x5BFC;&#x7F16;&#x7801;&#x4EBA;&#x5458;&#x4E3B;&#x52A8;&#x7684;&#x601D;&#x8003;&#x5F15;&#x7528;&#x4E3A;null&#x7684;&#x60C5;&#x51B5;&#xFF0C;</t></t></p>
+<blockquote>
+<p>&#x5141;&#x8BB8;&#x63A5;&#x53D7;&#x53EF;&#x80FD;&#x4E3A;null&#x7684;T&#x7C7B;&#x578B;&#x7684;&#x5F15;&#x7528;</p>
+</blockquote>
+<pre><code class="lang-java"><span class="hljs-comment">//T &#x662F;null&#xFF0C;</span>
+Optional.fromNullable(T)
+<span class="hljs-comment">//&#x82E5;T&#x5F15;&#x7528;&#x4E3A;null&#x5219;&#x5FEB;&#x901F;&#x5931;&#x8D25;,java.lang.NullPointerException</span>
+Optional.of(T)
+<span class="hljs-comment">//&#x521B;&#x5EFA;&#x5F15;&#x7528;NULl&#x7684;Optional&#x5B9E;&#x4F8B; </span>
+Optional.absent()
+
+
+
+Optional&lt;Integer&gt; possible = Optional.fromNullable(<span class="hljs-number">5</span>);  <span class="hljs-comment">//&#x521B;&#x5EFA;&#x5141;&#x8BB8;null&#x503C;&#x7684;Optional</span>
+possible.isPresent();
+possible.get();         <span class="hljs-comment">// 5</span>
+possible.or(<span class="hljs-number">3</span>));            <span class="hljs-comment">// 5</span>
+possible.orNull();      <span class="hljs-comment">// 5</span>
+possible.asSet();       <span class="hljs-comment">// [5]</span>
+
+
+<span class="hljs-comment">//....useCache=? &#x7B80;&#x5316;&#x7C97;&#x9C81;&#x7684;if(null == object)</span>
+possible = useCache ? Optional.fromNullable(<span class="hljs-keyword">new</span> SQLStatement()) : Optional.&lt;SQLStatement&gt;absent();
+<span class="hljs-keyword">if</span> (possible.isPresent()) {
+    <span class="hljs-keyword">return</span> possible.get();
+}
+</code></pre>
+<ul>
+<li>boolean isPresent() &#x5305;&#x542B;&#x7684;&#x5F15;&#x7528;&#x975E;null&#x7684;&#xFF08;&#x5F15;&#x7528;&#x5B58;&#x5728;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;true</li>
+<li>T get() &#x5305;&#x542B;&#x7684;&#x5F15;&#x7528;&#x7F3A;&#x5931;&#xFF0C;&#x5219;&#x629B;&#x51FA;java.lang.IllegalStateException</li>
+<li>T or(T) &#x5305;&#x542B;&#x7684;&#x5F15;&#x7528;&#x7F3A;&#x5931;&#xFF0C;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x7684;&#x503C;</li>
+<li>T orNull &#x5305;&#x542B;&#x7684;&#x5F15;&#x7528;&#x7F3A;&#x5931;&#xFF0C;&#x8FD4;&#x56DE;null</li>
+<li>Set<t> asSet() &#x5982;&#x679C;&#x5F15;&#x7528;&#x5B58;&#x5728;&#xFF0C;&#x8FD4;&#x56DE;&#x53EA;&#x6709;&#x5355;&#x4E00;&#x5143;&#x7D20;&#x7684;&#x96C6;&#x5408;&#xFF1B;&#x5F15;&#x7528;&#x7F3A;&#x5931;&#xFF0C;&#x8FD4;&#x56DE;&#x7A7A;&#x96C6;&#x5408;&#x3002;      </t></li>
+<li><v> Optional<v> transform() &#x5F15;&#x7528;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5B83;&#x88AB;&#x8F6C;&#x6362;&#x7ED9;&#x5B9A;&#x7684;&#x529F;&#x80FD;;&#x5426;&#x5219;absent()&#x88AB;&#x8FD4;&#x56DE;&#x3002;    </v></v></li>
+<li><t> Iterable<t> presentInstances(Iterable&lt;? extends Optional&lt;? extends T&gt;&gt; optionals)
+&#x5C06;&#x53C2;&#x6570;optionals&#x4E2D;&#x4E3A;null&#x7684;optional&#x5254;&#x9664;&#xFF0C;&#x540C;&#x65F6;&#x8FD4;&#x56DE;&#x503C;&#x5BF9;&#x8C61;&#x7684;Iterable </t></t></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../utils.html" class="navigation navigation-prev " aria-label="Previous page: utils">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="joiner.html" class="navigation navigation-next " aria-label="Next page: Joiner">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Optional优雅的使用null","level":"1.36.1","depth":2,"next":{"title":"Joiner","level":"1.36.2","depth":2,"path":"utils/joiner.md","ref":"utils/joiner.md","articles":[]},"previous":{"title":"utils","level":"1.36","depth":1,"path":"utils.md","ref":"utils.md","articles":[{"title":"Optional优雅的使用null","level":"1.36.1","depth":2,"path":"utils/optional.md","ref":"utils/optional.md","articles":[]},{"title":"Joiner","level":"1.36.2","depth":2,"path":"utils/joiner.md","ref":"utils/joiner.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"utils/optional.md","mtime":"2019-10-26T22:11:52.167Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-08T22:05:43.070Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
