@@ -7,6 +7,6 @@
   gitbook install && gitbook build 
 ```
 
-## [spring](spring/index.html)
+## [spring](springbook/index.html)
 
 ## [mysql](mysql/index.html)
