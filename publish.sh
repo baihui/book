@@ -7,7 +7,7 @@ for f in $(ls -F |grep "/$")
       echo "$(git pull)" 
       echo "$(git add * && git commit -a -m 'publish' )" 
       echo "$(git push)" 
-      echo "build $(gitbook build . ${pd})"
+      echo "build $(gitbook build . ${pd})/${f}"
  done
 
 cd ${pd}
