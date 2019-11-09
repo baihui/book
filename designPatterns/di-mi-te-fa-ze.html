@@ -1,0 +1,691 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>迪米特法则 · designpatterns</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-terminal/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="she-ji-yuan-ze-he-she-ji-mo-shi.html" />
+    
+    
+    <link rel="prev" href="dan-yi-zhi-ze-yuan-ze.html" />
+    
+
+    <link href="https://baihuiit.gitbooks.io/designpatterns/content/" title="GitBook 使用教程" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter1.html">
+            
+                <a href="chapter1.html">
+            
+                    
+                    First Chapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="guo-cheng-yu-dui-xiang.html">
+            
+                <a href="guo-cheng-yu-dui-xiang.html">
+            
+                    
+                    过程与对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="guo-cheng-yu-dui-xiang/oop.html">
+            
+                <a href="guo-cheng-yu-dui-xiang/oop.html">
+            
+                    
+                    OOP
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="she-ji-mo-shi.html">
+            
+                <a href="she-ji-mo-shi.html">
+            
+                    
+                    设计原则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ke-bian-xing-de-feng-zhuang-yuan-ze.html">
+            
+                <a href="ke-bian-xing-de-feng-zhuang-yuan-ze.html">
+            
+                    
+                    可变性的封装原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="lsp.html">
+            
+                <a href="lsp.html">
+            
+                    
+                    里氏代换原则(LSP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="yi-lai-dao-zhi-yuan-ze.html">
+            
+                <a href="yi-lai-dao-zhi-yuan-ze.html">
+            
+                    
+                    依赖倒置原则(DIP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="isp.html">
+            
+                <a href="isp.html">
+            
+                    
+                    接口隔离原则(ISP)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="he-6210-ju-he-fu-yong-yuan-ze.html">
+            
+                <a href="he-6210-ju-he-fu-yong-yuan-ze.html">
+            
+                    
+                    合成/聚合复用原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="dan-yi-zhi-ze-yuan-ze.html">
+            
+                <a href="dan-yi-zhi-ze-yuan-ze.html">
+            
+                    
+                    单一职责原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.7" data-path="di-mi-te-fa-ze.html">
+            
+                <a href="di-mi-te-fa-ze.html">
+            
+                    
+                    迪米特法则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="she-ji-yuan-ze-he-she-ji-mo-shi.html">
+            
+                <a href="she-ji-yuan-ze-he-she-ji-mo-shi.html">
+            
+                    
+                    设计原则和设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/she-ji-mo-shi.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1" data-path="she-ji-mo-shi/she-ji-mo-shi/xing-wei-xing-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/she-ji-mo-shi/xing-wei-xing-mo-shi.html">
+            
+                    
+                    行为型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.1.1" data-path="she-ji-mo-shi/mo-ban-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/mo-ban-mo-shi.html">
+            
+                    
+                    模板模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.1.2" data-path="she-ji-mo-shi/ce-lve-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/ce-lve-mo-shi.html">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.1.3" data-path="she-ji-mo-shi/guan-cha-zhe-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/guan-cha-zhe-mo-shi.html">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.1.4" data-path="she-ji-mo-shi/shi-pei-qi-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/shi-pei-qi-mo-shi.html">
+            
+                    
+                    适配器模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.2" data-path="she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi.html">
+            
+                    
+                    结构型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.9.2.1" data-path="she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi/zhuang-shi-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi/zhuang-shi-mo-shi.html">
+            
+                    
+                    装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9.3" data-path="she-ji-mo-shi/she-ji-mo-shi/chuang-jian-xing-mo-shi.html">
+            
+                <a href="she-ji-mo-shi/she-ji-mo-shi/chuang-jian-xing-mo-shi.html">
+            
+                    
+                    创建型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="gao-nei-ju-yu-di-ou-he.html">
+            
+                <a href="gao-nei-ju-yu-di-ou-he.html">
+            
+                    
+                    高内聚与低耦合
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="gao-nei-ju-yu-di-ou-he/ru-he-ba-wo-ou-he.html">
+            
+                <a href="gao-nei-ju-yu-di-ou-he/ru-he-ba-wo-ou-he.html">
+            
+                    
+                    如何把握耦合
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="zhong-gou-yu-mo-shi.html">
+            
+                <a href="zhong-gou-yu-mo-shi.html">
+            
+                    
+                    重构与模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >迪米特法则</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>5.1&#x6982;&#x8FF0;
+&#x5B9A;&#x4E49;&#xFF1A;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x5B9E;&#x4F53;&#x5E94;&#x5F53;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x4E0E;&#x5176;&#x4ED6;&#x5B9E;&#x4F53;&#x53D1;&#x751F;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x3002;
+&#x8FD9;&#x6837;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x4FEE;&#x6539;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5C3D;&#x91CF;&#x5C11;&#x7684;&#x5F71;&#x54CD;&#x5176;&#x4ED6;&#x7684;&#x6A21;&#x5757;&#x3002;&#x6269;&#x5C55;&#x4F1A;&#x76F8;&#x5BF9;&#x5BB9;&#x6613;&#x3002;
+&#x8FD9;&#x662F;&#x5BF9;&#x8F6F;&#x4EF6;&#x5B9E;&#x4F53;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x9650;&#x5236;&#x3002;&#x5B83;&#x8981;&#x6C42;&#x9650;&#x5236;&#x8F6F;&#x4EF6;&#x5B9E;&#x4F53;&#x4E4B;&#x95F4;&#x901A;&#x4FE1;&#x7684;&#x5BBD;&#x5EA6;&#x548C;&#x6DF1;&#x5EA6;&#x3002;
+5.2&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x7684;&#x5176;&#x4ED6;&#x8868;&#x8FF0;&#xFF1A;
+1&#xFF09;&#x53EA;&#x4E0E;&#x4F60;&#x76F4;&#x63A5;&#x7684;&#x670B;&#x53CB;&#x4EEC;&#x901A;&#x4FE1;&#x3002;
+2&#xFF09;&#x4E0D;&#x8981;&#x8DDF;&#x201C;&#x964C;&#x751F;&#x4EBA;&#x201D;&#x8BF4;&#x8BDD;&#x3002;
+3&#xFF09;&#x6BCF;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x5355;&#x4F4D;&#x5BF9;&#x5176;&#x4ED6;&#x7684;&#x5355;&#x4F4D;&#x90FD;&#x53EA;&#x6709;&#x6700;&#x5C11;&#x7684;&#x77E5;&#x8BC6;&#xFF0C;&#x800C;&#x4E14;&#x5C40;&#x9650;&#x4E8E;&#x90A3;&#x4E9B;&#x4E0E;&#x672C;&#x5355;&#x4F4D;&#x5BC6;&#x5207;&#x76F8;&#x5173;&#x7684;&#x8F6F;&#x4EF6;&#x5355;&#x4F4D;&#x3002;
+5.3&#x72ED;&#x4E49;&#x7684;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;
+&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x7C7B;&#x4E0D;&#x5FC5;&#x5F7C;&#x6B64;&#x76F4;&#x63A5;&#x901A;&#x4FE1;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x5C31;&#x4E0D;&#x5E94;&#x5F53;&#x53D1;&#x751F;&#x76F4;&#x63A5;&#x7684;&#x76F8;&#x4E92;&#x4F5C;&#x7528;&#x3002;&#x5982;&#x679C;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x7C7B;&#x9700;&#x8981;&#x8C03;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B2C;&#x4E09;&#x8005;&#x8F6C;&#x53D1;&#x8FD9;&#x4E2A;&#x8C03;&#x7528;&#x3002;
+&#x670B;&#x53CB;&#x5708;&#x7684;&#x786E;&#x5B9A;
+&#x201C;&#x670B;&#x53CB;&#x201D;&#x6761;&#x4EF6;&#xFF1A;
+1&#xFF09;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#xFF08;this&#xFF09;
+2&#xFF09;&#x4EE5;&#x53C2;&#x91CF;&#x5F62;&#x5F0F;&#x4F20;&#x5165;&#x5230;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;
+3&#xFF09;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;
+4&#xFF09;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x5982;&#x679C;&#x662F;&#x4E00;&#x4E2A;&#x805A;&#x96C6;&#xFF0C;&#x90A3;&#x4E48;&#x805A;&#x96C6;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x90FD;&#x662F;&#x670B;&#x53CB;
+5&#xFF09;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x6240;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;
+&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x6EE1;&#x8DB3;&#x4E0A;&#x9762;&#x7684;&#x6761;&#x4EF6;&#x4E4B;&#x4E00;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x201C;&#x670B;&#x53CB;&#x201D;&#xFF1B;&#x5426;&#x5219;&#x5C31;&#x662F;&#x201C;&#x964C;&#x751F;&#x4EBA;&#x201D;&#x3002;
+&#x7F3A;&#x70B9;&#xFF1A;&#x4F1A;&#x5728;&#x7CFB;&#x7EDF;&#x91CC;&#x9020;&#x51FA;&#x5927;&#x91CF;&#x7684;&#x5C0F;&#x65B9;&#x6CD5;&#xFF0C;&#x6563;&#x843D;&#x5728;&#x7CFB;&#x7EDF;&#x7684;&#x5404;&#x4E2A;&#x89D2;&#x843D;&#x3002;
+&#x4E0E;&#x4F9D;&#x8D56;&#x5012;&#x8F6C;&#x539F;&#x5219;&#x4E92;&#x8865;&#x4F7F;&#x7528;
+5.4&#x72ED;&#x4E49;&#x7684;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x7684;&#x7F3A;&#x70B9;&#xFF1A;
+&#x5728;&#x7CFB;&#x7EDF;&#x91CC;&#x9020;&#x51FA;&#x5927;&#x91CF;&#x7684;&#x5C0F;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4EC5;&#x4EC5;&#x662F;&#x4F20;&#x9012;&#x95F4;&#x63A5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x4E0E;&#x7CFB;&#x7EDF;&#x7684;&#x5546;&#x52A1;&#x903B;&#x8F91;&#x65E0;&#x5173;&#x3002;
+&#x9075;&#x5FAA;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5C40;&#x90E8;&#x8BBE;&#x8BA1;&#x7B80;&#x5316;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x5C40;&#x90E8;&#x90FD;&#x4E0D;&#x4F1A;&#x548C;&#x8FDC;&#x8DDD;&#x79BB;&#x7684;&#x5BF9;&#x8C61;&#x6709;&#x76F4;&#x63A5;&#x7684;&#x5173;&#x8054;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x4E5F;&#x4F1A;&#x9020;&#x6210;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x540C;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x6548;&#x7387;&#x964D;&#x4F4E;&#xFF0C;&#x4E5F;&#x4F1A;&#x4F7F;&#x7CFB;&#x7EDF;&#x7684;&#x4E0D;&#x540C;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x4E0D;&#x5BB9;&#x6613;&#x534F;&#x8C03;&#x3002;
+5.5&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x4E0E;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;
+&#x95E8;&#x9762;&#xFF08;&#x5916;&#x89C2;&#xFF09;&#x6A21;&#x5F0F;&#x548C;&#x8C03;&#x505C;&#x8005;&#xFF08;&#x4E2D;&#x4ECB;&#x8005;&#xFF09;&#x6A21;&#x5F0F;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x7684;&#x5177;&#x4F53;&#x5E94;&#x7528;&#x3002;
+5.6&#x5E7F;&#x4E49;&#x7684;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;
+&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x7684;&#x4E3B;&#x8981;&#x7528;&#x610F;&#x662F;&#x63A7;&#x5236;&#x4FE1;&#x606F;&#x7684;&#x8FC7;&#x8F7D;&#x3002;&#x5728;&#x5C06;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x8FD0;&#x7528;&#x5230;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x4E2D;&#x65F6;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x4E0B;&#x9762;&#x7684;&#x51E0;&#x70B9;&#xFF1A;
+1&#xFF09;&#x5728;&#x7C7B;&#x7684;&#x5212;&#x5206;&#x4E0A;&#xFF0C;&#x5E94;&#x5F53;&#x521B;&#x5EFA;&#x6709;&#x5F31;&#x8026;&#x5408;&#x7684;&#x7C7B;&#x3002;
+2&#xFF09;&#x5728;&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7C7B;&#x90FD;&#x5E94;&#x5F53;&#x5C3D;&#x91CF;&#x964D;&#x4F4E;&#x6210;&#x5458;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;
+3&#xFF09;&#x5728;&#x7C7B;&#x7684;&#x8BBE;&#x8BA1;&#x4E0A;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x53EF;&#x80FD;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x5E94;&#x5F53;&#x8BBE;&#x8BA1;&#x6210;&#x4E0D;&#x53D8;&#x7C7B;&#x3002;
+4&#xFF09;&#x5728;&#x5BF9;&#x5176;&#x4ED6;&#x7C7B;&#x7684;&#x5F15;&#x7528;&#x4E0A;&#xFF0C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5BF9;&#x5176;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x5E94;&#x5F53;&#x964D;&#x5230;&#x6700;&#x4F4E;&#x3002;
+5.7&#x5E7F;&#x4E49;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x5728;&#x7C7B;&#x7684;&#x8BBE;&#x8BA1;&#x4E0A;&#x7684;&#x4F53;&#x73B0;
+1&#xFF09;&#x4F18;&#x5148;&#x8003;&#x8651;&#x5C06;&#x4E00;&#x4E2A;&#x7C7B;&#x8BBE;&#x7F6E;&#x6210;&#x4E0D;&#x53D8;&#x7C7B;
+2&#xFF09;&#x5C3D;&#x91CF;&#x964D;&#x4F4E;&#x4E00;&#x4E2A;&#x7C7B;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;
+3&#xFF09;&#x8C28;&#x614E;&#x4F7F;&#x7528;Serializable
+4&#xFF09;&#x5C3D;&#x91CF;&#x964D;&#x4F4E;&#x6210;&#x5458;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;
+5&#xFF09;&#x53D6;&#x4EE3;C Struct
+&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x53C8;&#x53EB;&#x4F5C;&#x6700;&#x5C11;&#x77E5;&#x8BC6;&#x539F;&#x5219;&#xFF08;Least Knowledge Principle&#x6216;&#x7B80;&#x5199;&#x4E3A;LKP&#xFF09;&#xFF0C;&#x5C31;&#x662F;&#x8BF4;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5E94;&#x5F53;&#x5BF9;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x6709;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x4E86;&#x89E3;&#x3002;
+5.8&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;
+&#x8FEA;&#x7C73;&#x7279;&#x6CD5;&#x5219;&#x7684;&#x4E3B;&#x8981;&#x7528;&#x610F;&#x662F;&#x63A7;&#x5236;&#x4FE1;&#x606F;&#x7684;&#x8FC7;&#x8F7D;&#xFF0C;&#x5728;&#x5C06;&#x5176;&#x8FD0;&#x7528;&#x5230;&#x7CFB;&#x7EDF;&#x8BBE;&#x8BA1;&#x4E2D;&#x5E94;&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;
+1) &#x5728;&#x7C7B;&#x7684;&#x5212;&#x5206;&#x4E0A;&#xFF0C;&#x5E94;&#x5F53;&#x521B;&#x5EFA;&#x6709;&#x5F31;&#x8026;&#x5408;&#x7684;&#x7C7B;&#x3002;&#x7C7B;&#x4E4B;&#x95F4;&#x7684;&#x8026;&#x5408;&#x8D8A;&#x5F31;&#xFF0C;&#x5C31;&#x8D8A;&#x6709;&#x5229;&#x4E8E;&#x590D;&#x7528;&#x3002;
+2) &#x5728;&#x7C7B;&#x7684;&#x7ED3;&#x6784;&#x8BBE;&#x8BA1;&#x4E0A;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7C7B;&#x90FD;&#x5E94;&#x5F53;&#x5C3D;&#x91CF;&#x964D;&#x4F4E;&#x6210;&#x5458;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;&#x4E00;&#x4E2A;&#x7C7B;&#x4E0D;&#x5E94;&#x5F53;public&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x5E94;&#x5F53;&#x63D0;&#x4F9B;&#x53D6;&#x503C;&#x548C;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x8BA9;&#x5916;&#x754C;&#x95F4;&#x63A5;&#x8BBF;&#x95EE;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#x3002;
+3) &#x5728;&#x7C7B;&#x7684;&#x8BBE;&#x8BA1;&#x4E0A;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x53EF;&#x80FD;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x5E94;&#x5F53;&#x8BBE;&#x8BA1;&#x6210;&#x4E0D;&#x53D8;&#x7C7B;&#x3002;
+4) &#x5728;&#x5BF9;&#x5176;&#x5B83;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x4E0A;&#xFF0C;&#x4E00;&#x4E2A;&#x7C7B;&#x5BF9;&#x5176;&#x5B83;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x5E94;&#x8BE5;&#x964D;&#x5230;&#x6700;&#x4F4E;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; baihui.com 111 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2019-10-27 06:37:48
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dan-yi-zhi-ze-yuan-ze.html" class="navigation navigation-prev " aria-label="Previous page: 单一职责原则">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="she-ji-yuan-ze-he-she-ji-mo-shi.html" class="navigation navigation-next " aria-label="Next page: 设计原则和设计模式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"迪米特法则","level":"1.4.7","depth":2,"next":{"title":"设计原则和设计模式","level":"1.4.8","depth":2,"path":"she-ji-yuan-ze-he-she-ji-mo-shi.md","ref":"she-ji-yuan-ze-he-she-ji-mo-shi.md","articles":[]},"previous":{"title":"单一职责原则","level":"1.4.6","depth":2,"path":"dan-yi-zhi-ze-yuan-ze.md","ref":"dan-yi-zhi-ze-yuan-ze.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","puml","mermaid-gb3","tbfed-pagefooter","splitter","expandable-chapters-small","alerts","puml","-search","search-pro","baidu","terminal","rss","prism","prism-themes"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © baihui.com 111","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"github":{"url":"https://github.com/baihui"},"puml":{"charset":"UTF-8"},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"GitBook 使用教程","description":"记录 GitBook 的配置和一些插件的使用","author":"baihui","feed_url":"https://baihuiit.gitbooks.io/designpatterns/content/","site_url":"https://baihuiit.gitbooks.io/designpatterns/content/","managingEditor":"baihuiit@163.com","webMaster":"baihuiit@163.com"},"highlight":{},"mermaid-gb3":{},"prism-themes":{},"alerts":{},"expandable-chapters-small":{},"baidu":{"token":"YOUR TOKEN"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":false,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"designpatterns","language":"zh-hans","gitbook":"*"},"file":{"path":"di-mi-te-fa-ze.md","mtime":"2019-10-26T22:37:48.450Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T12:44:56.872Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-terminal/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

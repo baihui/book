@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[GitBook 使用教程]]></title>
+        <description><![CDATA[记录 GitBook 的配置和一些插件的使用]]></description>
+        <link>https://baihuiit.gitbooks.io/designpatterns/content/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 09 Nov 2019 12:44:59 GMT</lastBuildDate>
+        <atom:link href="https://baihuiit.gitbooks.io/designpatterns/content/" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[baihui]]></author>
+        <managingEditor><![CDATA[baihuiit@163.com]]></managingEditor>
+        <webMaster><![CDATA[baihuiit@163.com]]></webMaster>
+        <category><![CDATA[gitbook]]></category>
+        <item>
+            <title><![CDATA[My Awesome Book]]></title>
+            <description><![CDATA[This file file serves as your book's preface, a great place to describe your book's content and ideas.sdaads]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[First Chapter]]></title>
+            <description><![CDATA[GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/chapter1.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/chapter1.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/guo-cheng-yu-dui-xiang.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/guo-cheng-yu-dui-xiang.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[软件开发中疑难问题：]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/guo-cheng-yu-dui-xiang/oop.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/guo-cheng-yu-dui-xiang/oop.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[面向对象的三大机制“封装、继承、多态” 可以表达面向对象的所有概念，但这三大机制本身并没有刻画出面向对象的核心精神。换言之，既可以用这三大机制做出“好的面向对象设计”，也可以用这三大机制做出“差的面向对象设计”。因此不是使用了面向对象的语言，就实现了”好的面向对象设计”! 而所谓“好的面向对象设计”是那些可以满足“应对变化，提高复用”的设计称之为“好的设计” 要实现“好的设计” 需要遵循 **“针对接口编程，而不是针对实现编“, ”优先使用对象组合，而不是类继承“ 以及 “封装变化点”**，这三点的基石就是 “开-闭原则”，也就是面向对象设计的基石是“开-闭”原则。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[对可变性的封装原则即找到一个系统的可变因素将之封装起来,换言之在设计时什么可能会发生变化应使之成为抽象层被封装，而不是什么会导致设计改变才封装。对可变性封装原则”意味着两点：]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/ke-bian-xing-de-feng-zhuang-yuan-ze.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/ke-bian-xing-de-feng-zhuang-yuan-ze.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[里氏代换原则(Liskov Substitution Principle LSP)是面向对象设计的基本原则之一它是这样定义的任何基类可以出现的地方，子类一定可以出现。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/lsp.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/lsp.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[依赖倒转原则就是要依赖于抽象，不要依赖于实现。要针对接口编程，不要针对实现编程，而倒转指的是面向对象中层级的依赖与面向过程中层级依赖的转换。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/yi-lai-dao-zhi-yuan-ze.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/yi-lai-dao-zhi-yuan-ze.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[接口隔离原则针对的是对接口上的依赖程度。首先接口分为两种：]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/isp.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/isp.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[在一个新的对象里面使用一些已有的对象，使之成为新对象的一部分，且新的对象通过向这些对象的委派达到复用这些对象的目的。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/he-6210-ju-he-fu-yong-yuan-ze.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/he-6210-ju-he-fu-yong-yuan-ze.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[一个类，应该只有一个职责。每一个职责都是变化的一个轴线，如果一个类有一个以上的职责，这些职责就耦合在了一起。这会导致脆弱的设计。当一个职责发生变化时，可能会影响其它的职责。另外，多个职责耦合在一起，会影响复用性。我们可能只需要复用该类的某一个职责，但这个职责跟其它职责耦合在了一起，很难分离出来，]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/dan-yi-zhi-ze-yuan-ze.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/dan-yi-zhi-ze-yuan-ze.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[5.1概述
+定义：一个软件实体应当尽可能少的与其他实体发生相互作用。
+这样，当一个模块修改时，就会尽量少的影响其他的模块。扩展会相对容易。
+这是对软件实体之间通信的限制。它要求限制软件实体之间通信的宽度和深度。
+5.2迪米特法则的其他表述：
+1）只与你直接的朋友们通信。
+2）不要跟“陌生人”说话。
+3）每一个软件单位对其他的单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。
+5.3狭义的迪米特法则
+如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中的一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。
+朋友圈的确定
+“朋友”条件：
+1）当前对象本身（this）
+2）以参量形式传入到当前对象方法中的对象
+3）当前对象的实例变量直接引用的对象
+4）当前对象的实例变量如果是一个聚集，那么聚集中的元素也都是朋友
+5）当前对象所创建的对象
+任何一个对象，如果满足上面的条件之一，就是当前对象的“朋友”；否则就是“陌生人”。
+缺点：会在系统里造出大量的小方法，散落在系统的各个角落。
+与依赖倒转原则互补使用
+5.4狭义的迪米特法则的缺点：
+在系统里造出大量的小方法，这些方法仅仅是传递间接的调用，与系统的商务逻辑无关。
+遵循类之间的迪米特法则会是一个系统的局部设计简化，因为每一个局部都不会和远距离的对象有直接的关联。但是，这也会造成系统的不同模块之间的通信效率降低，也会使系统的不同模块之间不容易协调。
+5.5迪米特法则与设计模式
+门面（外观）模式和调停者（中介者）模式实际上就是迪米特法则的具体应用。
+5.6广义的迪米特法则
+迪米特法则的主要用意是控制信息的过载。在将迪米特法则运用到系统设计中时，要注意下面的几点：
+1）在类的划分上，应当创建有弱耦合的类。
+2）在类的结构设计上，每一个类都应当尽量降低成员的访问权限。
+3）在类的设计上，只要有可能，一个类应当设计成不变类。
+4）在对其他类的引用上，一个对象对其对象的引用应当降到最低。
+5.7广义迪米特法则在类的设计上的体现
+1）优先考虑将一个类设置成不变类
+2）尽量降低一个类的访问权限
+3）谨慎使用Serializable
+4）尽量降低成员的访问权限
+5）取代C Struct
+迪米特法则又叫作最少知识原则（Least Knowledge Principle或简写为LKP），就是说一个对象应当对其他对象有尽可能少的了解。
+5.8如何实现迪米特法则
+迪米特法则的主要用意是控制信息的过载，在将其运用到系统设计中应注意以下几点：]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/di-mi-te-fa-ze.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/di-mi-te-fa-ze.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[设计原则定义的是类抽象，而设计模式是类和类之间的组织关系]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-yuan-ze-he-she-ji-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-yuan-ze-he-she-ji-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[设计模式描述了软件设计过程中某一类常见问题的一般性的解决方案，面向对象设计模式描述了面向对象设计过程中、特定场景下、类与相互通信的对象之间常见的组织关系- 其目的是在不断变化中提高代码的复用。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[行为模式：类的行为和行为之间的组织关系]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/xing-wei-xing-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/xing-wei-xing-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[模版模式是定义一个抽象类并且实现一个方法该方法称为模版方法，以及该方法负责定义了该类提供的整个行为的逻辑过程，对其中可变行为抽象由同一继承等级提供不同表象的子类实现。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/mo-ban-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/mo-ban-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[策略模式适用场景]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/ce-lve-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/ce-lve-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/guan-cha-zhe-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/guan-cha-zhe-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[系统的数据和行为都正确，但接口不符时，我们应该考虑用适配器，目的是使控制范围之外的一个原有对象与某个接口匹配。适配器模式主要应用于希望复用一些现存的类，但是接口又与复用环境要求不一致的情况，将原来转换成你想要的]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/shi-pei-qi-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/shi-pei-qi-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[通过对多个类和对象进行组合得到复杂结构的类，一般使用继承继承或者成员变量引用形式来实现。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi/zhuang-shi-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/jie-gou-xing-mo-shi/zhuang-shi-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[对对象的实例化过程进行抽象，这使得一个系统可以不用关心这些对象是如何创建，组合，呈现的，对于类创建模式来说通过使用继承改变实例化的类，对于对象创建模式来说通过使用代理来实例化所需要的对象。]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/chuang-jian-xing-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/she-ji-mo-shi/she-ji-mo-shi/chuang-jian-xing-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[高内聚就是说相关度比较高的部分尽可能的集中不要分散，低耦合就是说两个相关的模块尽可以能把依赖的部分降低到最小，不要让两个系统产生强依赖]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/gao-nei-ju-yu-di-ou-he.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/gao-nei-ju-yu-di-ou-he.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[耦合（依赖）关系的种类]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/gao-nei-ju-yu-di-ou-he/ru-he-ba-wo-ou-he.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/gao-nei-ju-yu-di-ou-he/ru-he-ba-wo-ou-he.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[第一章]]></description>
+            <link>https://baihuiit.gitbooks.io/designpatterns/content/zhong-gou-yu-mo-shi.html</link>
+            <guid isPermaLink="true">https://baihuiit.gitbooks.io/designpatterns/content/zhong-gou-yu-mo-shi.html</guid>
+            <dc:creator><![CDATA[baihui]]></dc:creator>
+        </item>
+    </channel>
+</rss>
