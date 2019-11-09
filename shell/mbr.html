@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MBR · designpatterns</title>
+        <title>MBR · shell</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="baihui">
+        <meta name="author" content="baihuiit@163.com">
         
         
     
@@ -26,6 +26,10 @@
                 
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
                 
             
@@ -39,6 +43,10 @@
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
                 
             
                 
@@ -625,7 +633,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.1" data-path="wen-ben-fen-xi/awk.html">
+        <li class="chapter " data-level="1.4.14.1" data-path="sed.html">
+            
+                <a href="sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14.2" data-path="wen-ben-fen-xi/awk.html">
             
                 <a href="wen-ben-fen-xi/awk.html">
             
@@ -638,7 +659,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.14.2" data-path="grep.html">
+        <li class="chapter " data-level="1.4.14.3" data-path="grep.html">
             
                 <a href="grep.html">
             
@@ -652,7 +673,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.2.1" data-path="grep/or-and-andand.html">
+        <li class="chapter " data-level="1.4.14.3.1" data-path="grep/or-and-andand.html">
             
                 <a href="grep/or-and-andand.html">
             
@@ -2325,9 +2346,9 @@
 &#x5176;&#x503C;&#x4E3A;AA55&#xFF0C;&#x5B58;&#x50A8;&#x65F6;&#x4F4E;&#x4F4D;&#x5728;&#x524D;&#xFF0C;&#x9AD8;&#x4F4D;&#x5728;&#x540E;&#xFF0C;&#x5373;&#x770B;&#x4E0A;&#x53BB;&#x662F;55AA&#xFF08;&#x5341;&#x516D;&#x8FDB;&#x5236;&#xFF09;</li>
 </ul>
 <p>&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code class="lang-shell">#&#x5907;&#x4EFD;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;
-sudo dd if=/dev/sda of=/home/baihui/mbr.bak bs=512 count=1
-#&#x67E5;&#x770B;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x5185;&#x5BB9;
+<pre class="language-"><code class="lang-bash"><span class="token comment">#&#x5907;&#x4EFD;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;</span>
+<span class="token function">sudo</span> <span class="token function">dd</span> <span class="token assign-left variable">if</span><span class="token operator">=</span>/dev/sda <span class="token assign-left variable">of</span><span class="token operator">=</span>/home/baihui/mbr.bak <span class="token assign-left variable">bs</span><span class="token operator">=</span><span class="token number">512</span> <span class="token assign-left variable">count</span><span class="token operator">=</span><span class="token number">1</span>
+<span class="token comment">#&#x67E5;&#x770B;&#x4E3B;&#x5F15;&#x5BFC;&#x8BB0;&#x5F55;&#x5185;&#x5BB9;</span>
 od -x mbr.bak
 
 0000000 0000 0000 0000 0000 0000 0000 0000 0000
@@ -2384,7 +2405,7 @@ od -x mbr.bak
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MBR","level":"1.2.1","depth":2,"next":{"title":"grub","level":"1.2.2","depth":2,"path":"grub.md","ref":"grub.md","articles":[]},"previous":{"title":"start","level":"1.2","depth":1,"path":"start.md","ref":"start.md","articles":[{"title":"MBR","level":"1.2.1","depth":2,"path":"mbr.md","ref":"mbr.md","articles":[]},{"title":"grub","level":"1.2.2","depth":2,"path":"grub.md","ref":"grub.md","articles":[]},{"title":"int","level":"1.2.3","depth":2,"path":"int.md","ref":"int.md","articles":[]},{"title":"vmlinuz和initrd.img","level":"1.2.4","depth":2,"path":"vmlinuzhe-initrd-img.md","ref":"vmlinuzhe-initrd-img.md","articles":[]},{"title":"内核和内核模块","level":"1.2.5","depth":2,"path":"nei-he-he-nei-he-mo-kuai.md","ref":"nei-he-he-nei-he-mo-kuai.md","articles":[]},{"title":"设置开机启动脚本","level":"1.2.6","depth":2,"path":"she-zhi-kai-ji-qi-dong-jiao-ben.md","ref":"she-zhi-kai-ji-qi-dong-jiao-ben.md","articles":[{"title":"ubunut","level":"1.2.6.1","depth":3,"path":"she-zhi-kai-ji-qi-dong-jiao-ben/ubunut.md","ref":"she-zhi-kai-ji-qi-dong-jiao-ben/ubunut.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism-themes","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-hopscotch.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"prism-themes":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihui","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"designpatterns","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"mbr.md","mtime":"2019-10-26T22:12:45.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-08T22:06:22.054Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MBR","level":"1.2.1","depth":2,"next":{"title":"grub","level":"1.2.2","depth":2,"path":"grub.md","ref":"grub.md","articles":[]},"previous":{"title":"start","level":"1.2","depth":1,"path":"start.md","ref":"start.md","articles":[{"title":"MBR","level":"1.2.1","depth":2,"path":"mbr.md","ref":"mbr.md","articles":[]},{"title":"grub","level":"1.2.2","depth":2,"path":"grub.md","ref":"grub.md","articles":[]},{"title":"int","level":"1.2.3","depth":2,"path":"int.md","ref":"int.md","articles":[]},{"title":"vmlinuz和initrd.img","level":"1.2.4","depth":2,"path":"vmlinuzhe-initrd-img.md","ref":"vmlinuzhe-initrd-img.md","articles":[]},{"title":"内核和内核模块","level":"1.2.5","depth":2,"path":"nei-he-he-nei-he-mo-kuai.md","ref":"nei-he-he-nei-he-mo-kuai.md","articles":[]},{"title":"设置开机启动脚本","level":"1.2.6","depth":2,"path":"she-zhi-kai-ji-qi-dong-jiao-ben.md","ref":"she-zhi-kai-ji-qi-dong-jiao-ben.md","articles":[{"title":"ubunut","level":"1.2.6.1","depth":3,"path":"she-zhi-kai-ji-qi-dong-jiao-ben/ubunut.md","ref":"she-zhi-kai-ji-qi-dong-jiao-ben/ubunut.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","back-to-top-button","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"back-to-top-button":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihuiit@163.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"shell","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"mbr.md","mtime":"2019-11-09T00:02:51.528Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T02:28:41.932Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -2404,6 +2425,10 @@ od -x mbr.bak
     
         
         <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         

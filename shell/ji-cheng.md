@@ -1,6 +1,6 @@
 **shell环境是可以继承**
 如下：
-```shell
+```bash
 
 #定义一个变量
 export aaa=10

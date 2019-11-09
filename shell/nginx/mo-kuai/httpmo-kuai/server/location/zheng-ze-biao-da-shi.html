@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>正则表达式 · designpatterns</title>
+        <title>正则表达式 · shell</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="baihui">
+        <meta name="author" content="baihuiit@163.com">
         
         
     
@@ -26,6 +26,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-alerts/style.css">
                 
             
@@ -39,6 +43,10 @@
             
                 
                 <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
                 
             
                 
@@ -625,7 +633,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.1" data-path="../../../../../wen-ben-fen-xi/awk.html">
+        <li class="chapter " data-level="1.4.14.1" data-path="../../../../../sed.html">
+            
+                <a href="../../../../../sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14.2" data-path="../../../../../wen-ben-fen-xi/awk.html">
             
                 <a href="../../../../../wen-ben-fen-xi/awk.html">
             
@@ -638,7 +659,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.14.2" data-path="../../../../../grep.html">
+        <li class="chapter " data-level="1.4.14.3" data-path="../../../../../grep.html">
             
                 <a href="../../../../../grep.html">
             
@@ -652,7 +673,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.2.1" data-path="../../../../../grep/or-and-andand.html">
+        <li class="chapter " data-level="1.4.14.3.1" data-path="../../../../../grep/or-and-andand.html">
             
                 <a href="../../../../../grep/or-and-andand.html">
             
@@ -2344,36 +2365,36 @@
 </tr>
 </tbody>
 </table>
-<pre><code class="lang-nginx">
- if ( $server_name ~ ((|www.|)([if ( $ser|
- #&#x8FC7;&#x6EE4;&#x4E3B;&#x57DF;&#x540D;
- if ( $server_name ~ ((www.|)([\S\s]*)) ) {
-  set $domain $3;
- }
- #&#x8BBE;&#x5B9A;&#x521D;&#x59CB;&#x503C;
- set $temp 0;
+<pre class="language-"><code class="lang-nginx">
+ <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$server_name</span> <span class="token operator">~</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">|</span>www<span class="token punctuation">.</span><span class="token operator">|</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$ser</span><span class="token operator">|</span>
+ <span class="token comment">#&#x8FC7;&#x6EE4;&#x4E3B;&#x57DF;&#x540D;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$server_name</span> <span class="token operator">~</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>www<span class="token punctuation">.</span><span class="token operator">|</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">[</span>\S\s<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">set</span> <span class="token variable">$domain</span> $<span class="token number">3</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment">#&#x8BBE;&#x5B9A;&#x521D;&#x59CB;&#x503C;</span>
+ <span class="token keyword">set</span> <span class="token variable">$temp</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
- #&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x652F;&#x4ED8;&#x57DF;&#x540D;
- if ( $host ~* (pay|zf) ) {
-  set $temp &quot;${temp}1&quot;;
- }
+ <span class="token comment">#&#x5224;&#x65AD;&#x662F;&#x5426;&#x4E3A;&#x652F;&#x4ED8;&#x57DF;&#x540D;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$host</span> <span class="token operator">~</span><span class="token operator">*</span> <span class="token punctuation">(</span>pay<span class="token operator">|</span>zf<span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">set</span> <span class="token variable">$temp</span> <span class="token string">&quot;${temp}1&quot;</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 
- #&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x624B;&#x673A;&#x7AEF;
- if ($http_user_agent ~* (mobile|nokia|iphone|ipad|android|samsung|htc|blackberry)) {
-  set $temp &quot;${temp}2&quot;;
- }
+ <span class="token comment">#&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x624B;&#x673A;&#x7AEF;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token variable">$http_user_agent</span> <span class="token operator">~</span><span class="token operator">*</span> <span class="token punctuation">(</span>mobile<span class="token operator">|</span>nokia<span class="token operator">|</span>iphone<span class="token operator">|</span>ipad<span class="token operator">|</span>android<span class="token operator">|</span>samsung<span class="token operator">|</span>htc<span class="token operator">|</span>blackberry<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">set</span> <span class="token variable">$temp</span> <span class="token string">&quot;${temp}2&quot;</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 
- #&#x5224;&#x65AD;&#x662F;&#x5426;&#x8DF3;&#x8F6C;
- if ( $temp = &quot;02&quot; ) {
-  rewrite ^(.*) https://app.$domain permanent;
- }
+ <span class="token comment">#&#x5224;&#x65AD;&#x662F;&#x5426;&#x8DF3;&#x8F6C;</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token variable">$temp</span> <span class="token operator">=</span> <span class="token string">&quot;02&quot;</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">rewrite</span> <span class="token operator">^</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>app<span class="token punctuation">.</span><span class="token variable">$domain</span> permanent<span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
 </code></pre>
 <blockquote>
 <p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x9700;&#x8981;&#x53D6;&#x5F97;&#x4E3B;&#x57DF;&#x540D;&#x90E8;&#x5206;&#xFF0C;&#x90A3;&#x5C31;&#x5C11;&#x4E0D;&#x4E86;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x53BB;&#x5339;&#x914D;&#xFF0C;&#x5047;&#x5982;&#x8BF4;&#x4EE5;www.baidu.com&#x8FD9;&#x6761;&#x57DF;&#x540D;&#x4E3A;&#x4F8B;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x662F;www.&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x4F1A;&#x5B58;&#x5728;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x5C31;&#x662F;&#x7528;&#x6237;&#x53EF;&#x80FD;&#x4F1A;&#x76F4;&#x63A5;&#x8F93;&#x5165;baidu.com&#x8FD9;&#x6837;&#x5B50;&#x53BB;&#x8BBF;&#x95EE;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x662F;&#x7528;(www.|)&#x53BB;&#x8FDB;&#x884C;&#x5339;&#x914D;&#xFF0C;&#x518D;&#x7136;&#x540E;&#x5339;&#x914D;&#x70B9;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x4E0B;&#x9762;&#x7684;$3&#x662F;&#x8868;&#x793A;&#x53D6;&#x7B2C;&#x4E09;&#x4E2A;&#x62EC;&#x53F7;&#x91CC;&#x7684;&#x503C;&#xFF0C;&#x6700;&#x540E;&#x590D;&#x503C;&#x7ED9;$a&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x901A;&#x8FC7;$http_user_agent&#x8FD9;&#x4E2A;&#x5185;&#x7F6E;&#x53D8;&#x91CF;&#x53BB;&#x8FDB;&#x884C;&#x5224;&#x65AD;&#x7528;&#x6237;&#x662F;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x64CD;&#x4F5C;&#x3002;</p>
 </blockquote>
 <p>&#x8FD9;&#x4E2A;&#x6848;&#x4F8B;&#x7684;&#x9700;&#x6C42;&#x662F;&#x8FD9;&#x6837;&#x5B50;&#x7684;,&#x6211;&#x4EEC;&#x63D0;&#x4EA4;&#x4E00;&#x4E9B;&#x8868;&#x5355;&#x5185;&#x5BB9;&#x540E;url&#x5730;&#x5740;&#x4F1A;&#x663E;&#x793A;&#x9664;&#x90E8;&#x5206;&#x53C2;&#x6570;&#xFF0C;&#x6BD4;&#x5982;<a href="http://baidu.com/index.php?user=admin&amp;pass=123,&#x800C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;url&#x91CD;&#x5199;&#x4E3A;http://baidu.com/index" target="_blank">http://baidu.com/index.php?user=admin&amp;pass=123,&#x800C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;url&#x91CD;&#x5199;&#x4E3A;http://baidu.com/index</a></p>
-<pre><code class="lang-nginx">rewrite ^/(\w+)/(\w+)/z(\d+) /$1/$2/$3/$arg_x/$arg_y? permanent;
-rewrite ^/(\w+)/(\w+)/(\d+)/(\d+)/(\d+) /$1/$2/$3/$4_$5.png permanent;
+<pre class="language-"><code class="lang-nginx"><span class="token keyword">rewrite</span> <span class="token operator">^</span><span class="token operator">/</span><span class="token punctuation">(</span>\w<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>\w<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">z</span><span class="token punctuation">(</span>\d<span class="token operator">+</span><span class="token punctuation">)</span> <span class="token operator">/</span>$<span class="token number">1</span><span class="token operator">/</span>$<span class="token number">2</span><span class="token operator">/</span>$<span class="token number">3</span><span class="token operator">/</span><span class="token variable">$arg_x</span><span class="token operator">/</span><span class="token variable">$arg_y</span><span class="token operator">?</span> permanent<span class="token punctuation">;</span>
+<span class="token keyword">rewrite</span> <span class="token operator">^</span><span class="token operator">/</span><span class="token punctuation">(</span>\w<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>\w<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>\d<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>\d<span class="token operator">+</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span>\d<span class="token operator">+</span><span class="token punctuation">)</span> <span class="token operator">/</span>$<span class="token number">1</span><span class="token operator">/</span>$<span class="token number">2</span><span class="token operator">/</span>$<span class="token number">3</span><span class="token operator">/</span>$<span class="token number">4</span>_$<span class="token number">5.</span>png permanent<span class="token punctuation">;</span>
 </code></pre>
 <p>&#x811A;&#x672C;&#x903B;&#x8F91;&#x5206;&#x6790;&#xFF1A;</p>
 <p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x60F3;&#x60F3;&#x60F3;url&#x7684;&#x6F14;&#x53D8;&#xFF0C;<a href="http://baidu.com/index.php?user=admin&amp;pass=123" target="_blank">http://baidu.com/index.php?user=admin&amp;pass=123</a> =&gt; <a href="http://baidu.com/index.php/user/admin/pass/123" target="_blank">http://baidu.com/index.php/user/admin/pass/123</a> =&gt; <a href="http://baidu.com/index,&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x6F14;&#x53D8;&#x8FDB;&#x884C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;nginx" target="_blank">http://baidu.com/index,&#x7136;&#x540E;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x6F14;&#x53D8;&#x8FDB;&#x884C;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;nginx</a> rewrite&#x6B63;&#x5219;&#x5339;&#x914D;&#x4E0D;&#x4F1A;&#x5339;&#x914D;&#x95EE;&#x53F7;&#x540E;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x4F7F;&#x7528;$arg_{&#x53C2;&#x6570;&#x540D;}&#x6765;&#x4FDD;&#x7559;&#x53C2;&#x6570;&#xFF0C;&#x4E14;&#x5339;&#x914D;&#x89C4;&#x5219;&#x8981;&#x4EE5;&#x95EE;&#x53F7;&#x7ED3;&#x5C3E;&#xFF1B;&#x6700;&#x540E;&#x5339;&#x914D;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x9879;&#x66FF;&#x6362;&#x5C31;&#x5B8C;&#x6210;&#x91CD;&#x5199;&#x4E86;</p>
@@ -2420,7 +2441,7 @@ rewrite ^/(\w+)/(\w+)/(\d+)/(\d+)/(\d+) /$1/$2/$3/$4_$5.png permanent;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"正则表达式","level":"1.15.2.4.1.1.2","depth":6,"next":{"title":"cache","level":"1.15.2.4.2","depth":4,"path":"nginx/mo-kuai/httpmo-kuai/cache.md","ref":"nginx/mo-kuai/httpmo-kuai/cache.md","articles":[]},"previous":{"title":"匹配顺序","level":"1.15.2.4.1.1.1","depth":6,"path":"nginx/mo-kuai/httpmo-kuai/server/location/pi-pei-shun-xu.md","ref":"nginx/mo-kuai/httpmo-kuai/server/location/pi-pei-shun-xu.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism-themes","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-hopscotch.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"prism-themes":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihui","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"designpatterns","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"nginx/mo-kuai/httpmo-kuai/server/location/zheng-ze-biao-da-shi.md","mtime":"2019-10-26T22:12:45.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-08T22:06:22.054Z"},"basePath":"../../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"正则表达式","level":"1.15.2.4.1.1.2","depth":6,"next":{"title":"cache","level":"1.15.2.4.2","depth":4,"path":"nginx/mo-kuai/httpmo-kuai/cache.md","ref":"nginx/mo-kuai/httpmo-kuai/cache.md","articles":[]},"previous":{"title":"匹配顺序","level":"1.15.2.4.1.1.1","depth":6,"path":"nginx/mo-kuai/httpmo-kuai/server/location/pi-pei-shun-xu.md","ref":"nginx/mo-kuai/httpmo-kuai/server/location/pi-pei-shun-xu.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","back-to-top-button","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"back-to-top-button":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihuiit@163.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"shell","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"nginx/mo-kuai/httpmo-kuai/server/location/zheng-ze-biao-da-shi.md","mtime":"2019-10-26T22:12:45.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T02:28:41.932Z"},"basePath":"../../../../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2440,6 +2461,10 @@ rewrite ^/(\w+)/(\w+)/(\d+)/(\d+)/(\d+) /$1/$2/$3/$4_$5.png permanent;
     
         
         <script src="../../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         

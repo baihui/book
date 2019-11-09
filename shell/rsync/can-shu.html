@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>参数 · designpatterns</title>
+        <title>参数 · shell</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="baihui">
+        <meta name="author" content="baihuiit@163.com">
         
         
     
@@ -26,6 +26,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-alerts/style.css">
                 
             
@@ -39,6 +43,10 @@
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
                 
             
                 
@@ -625,7 +633,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.1" data-path="../wen-ben-fen-xi/awk.html">
+        <li class="chapter " data-level="1.4.14.1" data-path="../sed.html">
+            
+                <a href="../sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14.2" data-path="../wen-ben-fen-xi/awk.html">
             
                 <a href="../wen-ben-fen-xi/awk.html">
             
@@ -638,7 +659,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.14.2" data-path="../grep.html">
+        <li class="chapter " data-level="1.4.14.3" data-path="../grep.html">
             
                 <a href="../grep.html">
             
@@ -652,7 +673,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.2.1" data-path="../grep/or-and-andand.html">
+        <li class="chapter " data-level="1.4.14.3.1" data-path="../grep/or-and-andand.html">
             
                 <a href="../grep/or-and-andand.html">
             
@@ -2304,36 +2325,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <pre><code class="lang-shell">-v&#xFF1A;&#x663E;&#x793A;rsync&#x8FC7;&#x7A0B;&#x4E2D;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&quot;-vvvv&quot;&#x83B7;&#x53D6;&#x66F4;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;
--P&#xFF1A;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#x7684;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#x3002;(&#x5B9E;&#x9645;&#x4E0A;&quot;-P&quot;=&quot;--partial --progress&quot;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&quot;--progress&quot;&#x624D;&#x662F;&#x663E;&#x793A;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#x7684;)&#x3002;
--n --dry-run  &#xFF1A;&#x4EC5;&#x6D4B;&#x8BD5;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x4E0D;&#x5B9E;&#x9645;&#x4F20;&#x8F93;&#x3002;&#x5E38;&#x548C;&quot;-vvvv&quot;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x6765;&#x67E5;&#x770B;rsync&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;
--a --archive  &#xFF1A;&#x5F52;&#x6863;&#x6A21;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x9012;&#x5F52;&#x4F20;&#x8F93;&#x5E76;&#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x3002;&#x7B49;&#x540C;&#x4E8E;&quot;-rtopgDl&quot;&#x3002;
+                                <pre class="language-"><code class="lang-shell">-v&#xFF1A;&#x663E;&#x793A;rsync&#x8FC7;&#x7A0B;&#x4E2D;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<span class="token string">&quot;-vvvv&quot;</span>&#x83B7;&#x53D6;&#x66F4;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;
+-P&#xFF1A;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#x7684;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#x3002;<span class="token punctuation">(</span>&#x5B9E;&#x9645;&#x4E0A;<span class="token string">&quot;-P&quot;</span><span class="token operator">=</span><span class="token string">&quot;--partial --progress&quot;</span>&#xFF0C;&#x5176;&#x4E2D;&#x7684;<span class="token string">&quot;--progress&quot;</span>&#x624D;&#x662F;&#x663E;&#x793A;&#x8FDB;&#x5EA6;&#x4FE1;&#x606F;&#x7684;<span class="token punctuation">)</span>&#x3002;
+-n --dry-run  &#xFF1A;&#x4EC5;&#x6D4B;&#x8BD5;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x4E0D;&#x5B9E;&#x9645;&#x4F20;&#x8F93;&#x3002;&#x5E38;&#x548C;<span class="token string">&quot;-vvvv&quot;</span>&#x914D;&#x5408;&#x4F7F;&#x7528;&#x6765;&#x67E5;&#x770B;rsync&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;
+-a --archive  &#xFF1A;&#x5F52;&#x6863;&#x6A21;&#x5F0F;&#xFF0C;&#x8868;&#x793A;&#x9012;&#x5F52;&#x4F20;&#x8F93;&#x5E76;&#x4FDD;&#x6301;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x3002;&#x7B49;&#x540C;&#x4E8E;<span class="token string">&quot;-rtopgDl&quot;</span>&#x3002;
 -r --recursive&#xFF1A;&#x9012;&#x5F52;&#x5230;&#x76EE;&#x5F55;&#x4E2D;&#x53BB;&#x3002;
--t --times&#xFF1A;&#x4FDD;&#x6301;mtime&#x5C5E;&#x6027;&#x3002;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x90FD;&#x52A0;&#x4E0A;&quot;-t&quot;&#xFF0C;&#x5426;&#x5219;&#x76EE;&#x6807;&#x6587;&#x4EF6;mtime&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#xFF0C;&#x5BFC;&#x81F4;&#x4E0B;&#x6B21;&#x66F4;&#x65B0;
+-t --times&#xFF1A;&#x4FDD;&#x6301;mtime&#x5C5E;&#x6027;&#x3002;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x90FD;&#x52A0;&#x4E0A;<span class="token string">&quot;-t&quot;</span>&#xFF0C;&#x5426;&#x5219;&#x76EE;&#x6807;&#x6587;&#x4EF6;mtime&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A;&#x7CFB;&#x7EDF;&#x65F6;&#x95F4;&#xFF0C;&#x5BFC;&#x81F4;&#x4E0B;&#x6B21;&#x66F4;&#x65B0;
           &#xFF1A;&#x68C0;&#x67E5;&#x51FA;mtime&#x4E0D;&#x540C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x589E;&#x91CF;&#x4F20;&#x8F93;&#x65E0;&#x6548;&#x3002;
--o --owner&#xFF1A;&#x4FDD;&#x6301;owner&#x5C5E;&#x6027;(&#x5C5E;&#x4E3B;)&#x3002;
--g --group&#xFF1A;&#x4FDD;&#x6301;group&#x5C5E;&#x6027;(&#x5C5E;&#x7EC4;)&#x3002;
--p --perms&#xFF1A;&#x4FDD;&#x6301;perms&#x5C5E;&#x6027;(&#x6743;&#x9650;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x7279;&#x6B8A;&#x6743;&#x9650;)&#x3002;
--D        &#xFF1A;&#x662F;&quot;--device --specials&quot;&#x9009;&#x9879;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5373;&#x4E5F;&#x62F7;&#x8D1D;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x548C;&#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x3002;
+-o --owner&#xFF1A;&#x4FDD;&#x6301;owner&#x5C5E;&#x6027;<span class="token punctuation">(</span>&#x5C5E;&#x4E3B;<span class="token punctuation">)</span>&#x3002;
+-g --group&#xFF1A;&#x4FDD;&#x6301;group&#x5C5E;&#x6027;<span class="token punctuation">(</span>&#x5C5E;&#x7EC4;<span class="token punctuation">)</span>&#x3002;
+-p --perms&#xFF1A;&#x4FDD;&#x6301;perms&#x5C5E;&#x6027;<span class="token punctuation">(</span>&#x6743;&#x9650;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x7279;&#x6B8A;&#x6743;&#x9650;<span class="token punctuation">)</span>&#x3002;
+-D        &#xFF1A;&#x662F;<span class="token string">&quot;--device --specials&quot;</span>&#x9009;&#x9879;&#x7684;&#x7EC4;&#x5408;&#xFF0C;&#x5373;&#x4E5F;&#x62F7;&#x8D1D;&#x8BBE;&#x5907;&#x6587;&#x4EF6;&#x548C;&#x7279;&#x6B8A;&#x6587;&#x4EF6;&#x3002;
 -l --links&#xFF1A;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x662F;&#x8F6F;&#x94FE;&#x63A5;&#x6587;&#x4EF6;&#xFF0C;&#x5219;&#x62F7;&#x8D1D;&#x8F6F;&#x94FE;&#x63A5;&#x672C;&#x8EAB;&#x800C;&#x975E;&#x8F6F;&#x94FE;&#x63A5;&#x6240;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x3002;
 -z        &#xFF1A;&#x4F20;&#x8F93;&#x65F6;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;
 -R --relative&#xFF1A;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x3002;&#x610F;&#x5473;&#x7740;&#x5C06;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x5168;&#x8DEF;&#x5F84;&#x800C;&#x975E;&#x8DEF;&#x5F84;&#x6700;&#x5C3E;&#x90E8;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x53D1;&#x9001;&#x7ED9;&#x670D;&#x52A1;&#x7AEF;&#xFF0C;&#x5305;&#x62EC;&#x5B83;&#x4EEC;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x7528;&#x6CD5;&#x89C1;&#x4E0B;&#x6587;&#x793A;&#x4F8B;&#x3002;
 --size-only &#xFF1A;&#x9ED8;&#x8BA4;&#x7B97;&#x6CD5;&#x662F;&#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x548C;mtime&#x4E0D;&#x540C;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x6B64;&#x9009;&#x9879;&#x5C06;&#x53EA;&#x68C0;&#x67E5;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x3002;
 -u --update &#xFF1A;&#x4EC5;&#x5728;&#x6E90;mtime&#x6BD4;&#x76EE;&#x6807;&#x5DF2;&#x5B58;&#x5728;&#x6587;&#x4EF6;&#x7684;mtime&#x65B0;&#x65F6;&#x624D;&#x62F7;&#x8D1D;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x662F;&#x63A5;&#x6536;&#x7AEF;&#x5224;&#x65AD;&#x7684;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5220;&#x9664;&#x884C;&#x4E3A;&#x3002;
--d --dirs   &#xFF1A;&#x4EE5;&#x4E0D;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x5F0F;&#x62F7;&#x8D1D;&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x3002;&#x9ED8;&#x8BA4;&#x9012;&#x5F52;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6E90;&#x4E3A;&quot;dir1/file1&quot;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x62F7;&#x8D1D;dir1&#x76EE;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x62F7;&#x8D1D;dir1&#x4F46;&#x4E0D;&#x62F7;&#x8D1D;file1&#x3002;
---max-size  &#xFF1A;&#x9650;&#x5236;rsync&#x4F20;&#x8F93;&#x7684;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x4F4D;&#x540E;&#x7F00;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x6570;&#x503C;(&#x4F8B;&#x5982;&#xFF1A;&quot;--max-size=1.5m&quot;)
+-d --dirs   &#xFF1A;&#x4EE5;&#x4E0D;&#x9012;&#x5F52;&#x7684;&#x65B9;&#x5F0F;&#x62F7;&#x8D1D;&#x76EE;&#x5F55;&#x672C;&#x8EAB;&#x3002;&#x9ED8;&#x8BA4;&#x9012;&#x5F52;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6E90;&#x4E3A;<span class="token string">&quot;dir1/file1&quot;</span>&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x62F7;&#x8D1D;dir1&#x76EE;&#x5F55;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x9009;&#x9879;&#x5C06;&#x62F7;&#x8D1D;dir1&#x4F46;&#x4E0D;&#x62F7;&#x8D1D;file1&#x3002;
+--max-size  &#xFF1A;&#x9650;&#x5236;rsync&#x4F20;&#x8F93;&#x7684;&#x6700;&#x5927;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5355;&#x4F4D;&#x540E;&#x7F00;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5C0F;&#x6570;&#x503C;<span class="token punctuation">(</span>&#x4F8B;&#x5982;&#xFF1A;<span class="token string">&quot;--max-size=1.5m&quot;</span><span class="token punctuation">)</span>
 --min-size  &#xFF1A;&#x9650;&#x5236;rsync&#x4F20;&#x8F93;&#x7684;&#x6700;&#x5C0F;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x7981;&#x6B62;&#x4F20;&#x8F93;&#x5C0F;&#x6587;&#x4EF6;&#x6216;&#x90A3;&#x4E9B;&#x5783;&#x573E;&#x6587;&#x4EF6;&#x3002;
 --exclude   &#xFF1A;&#x6307;&#x5B9A;&#x6392;&#x9664;&#x89C4;&#x5219;&#x6765;&#x6392;&#x9664;&#x4E0D;&#x9700;&#x8981;&#x4F20;&#x8F93;&#x7684;&#x6587;&#x4EF6;&#x3002;
---delete    &#xFF1A;&#x4EE5;SRC&#x4E3A;&#x4E3B;&#xFF0C;&#x5BF9;DEST&#x8FDB;&#x884C;&#x540C;&#x6B65;&#x3002;&#x591A;&#x5219;&#x5220;&#x4E4B;&#xFF0C;&#x5C11;&#x5219;&#x8865;&#x4E4B;&#x3002;&#x6CE8;&#x610F;&quot;--delete&quot;&#x662F;&#x5728;&#x63A5;&#x6536;&#x7AEF;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;&#x5728;
+--delete    &#xFF1A;&#x4EE5;SRC&#x4E3A;&#x4E3B;&#xFF0C;&#x5BF9;DEST&#x8FDB;&#x884C;&#x540C;&#x6B65;&#x3002;&#x591A;&#x5219;&#x5220;&#x4E4B;&#xFF0C;&#x5C11;&#x5219;&#x8865;&#x4E4B;&#x3002;&#x6CE8;&#x610F;<span class="token string">&quot;--delete&quot;</span>&#x662F;&#x5728;&#x63A5;&#x6536;&#x7AEF;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x662F;&#x5728;
             &#xFF1A;exclude/include&#x89C4;&#x5219;&#x751F;&#x6548;&#x4E4B;&#x540E;&#x624D;&#x6267;&#x884C;&#x7684;&#x3002;
--b --backup &#xFF1A;&#x5BF9;&#x76EE;&#x6807;&#x4E0A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x505A;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#xFF0C;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x540E;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&quot;~&quot;&#x505A;&#x540E;&#x7F00;&#x3002;
+-b --backup &#xFF1A;&#x5BF9;&#x76EE;&#x6807;&#x4E0A;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x505A;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#xFF0C;&#x5907;&#x4EFD;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x540E;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;<span class="token string">&quot;~&quot;</span>&#x505A;&#x540E;&#x7F00;&#x3002;
 --backup-dir&#xFF1A;&#x6307;&#x5B9A;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x7684;&#x4FDD;&#x5B58;&#x8DEF;&#x5F84;&#x3002;&#x4E0D;&#x6307;&#x5B9A;&#x65F6;&#x9ED8;&#x8BA4;&#x548C;&#x5F85;&#x5907;&#x4EFD;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x540C;&#x4E00;&#x76EE;&#x5F55;&#x4E0B;&#x3002;
 -e          &#xFF1A;&#x6307;&#x5B9A;&#x6240;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x8FDC;&#x7A0B;shell&#x7A0B;&#x5E8F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;ssh&#x3002;
 --port      &#xFF1A;&#x8FDE;&#x63A5;daemon&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;873&#x7AEF;&#x53E3;&#x3002;
 --password-file&#xFF1A;daemon&#x6A21;&#x5F0F;&#x65F6;&#x7684;&#x5BC6;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x4E2D;&#x8BFB;&#x53D6;&#x5BC6;&#x7801;&#x5B9E;&#x73B0;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x4E0D;&#x662F;&#x8FDC;&#x7A0B;shell&#x8BA4;&#x8BC1;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x800C;&#x662F;rsync&#x6A21;&#x5757;&#x8BA4;&#x8BC1;&#x7684;&#x5BC6;&#x7801;&#x3002;
 -W --whole-file&#xFF1A;rsync&#x5C06;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x589E;&#x91CF;&#x4F20;&#x8F93;&#xFF0C;&#x800C;&#x662F;&#x5168;&#x91CF;&#x4F20;&#x8F93;&#x3002;&#x5728;&#x7F51;&#x7EDC;&#x5E26;&#x5BBD;&#x9AD8;&#x4E8E;&#x78C1;&#x76D8;&#x5E26;&#x5BBD;&#x65F6;&#xFF0C;&#x8BE5;&#x9009;&#x9879;&#x6BD4;&#x589E;&#x91CF;&#x4F20;&#x8F93;&#x66F4;&#x9AD8;&#x6548;&#x3002;
 --existing  &#xFF1A;&#x8981;&#x6C42;&#x53EA;&#x66F4;&#x65B0;&#x76EE;&#x6807;&#x7AEF;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x76EE;&#x6807;&#x7AEF;&#x8FD8;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x4F20;&#x8F93;&#x3002;&#x6CE8;&#x610F;&#xFF0C;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84;&#x65F6;&#x5982;&#x679C;&#x4E0A;&#x5C42;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#x4E5F;&#x4E0D;&#x4F1A;&#x4F20;&#x8F93;&#x3002;
---ignore-existing&#xFF1A;&#x8981;&#x6C42;&#x53EA;&#x66F4;&#x65B0;&#x76EE;&#x6807;&#x7AEF;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x548C;&quot;--existing&quot;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x6709;&#x7279;&#x6B8A;&#x529F;&#x80FD;&#xFF0C;&#x89C1;&#x4E0B;&#x6587;&#x793A;&#x4F8B;&#x3002;
+--ignore-existing&#xFF1A;&#x8981;&#x6C42;&#x53EA;&#x66F4;&#x65B0;&#x76EE;&#x6807;&#x7AEF;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x548C;<span class="token string">&quot;--existing&quot;</span>&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x6709;&#x7279;&#x6B8A;&#x529F;&#x80FD;&#xFF0C;&#x89C1;&#x4E0B;&#x6587;&#x793A;&#x4F8B;&#x3002;
 --remove-source-files&#xFF1A;&#x8981;&#x6C42;&#x5220;&#x9664;&#x6E90;&#x7AEF;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x4F20;&#x8F93;&#x7684;&#x6587;&#x4EF6;&#x3002;
 </code></pre>
 
@@ -2379,7 +2400,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"参数","level":"1.9.6.1.1","depth":4,"next":{"title":"scp","level":"1.9.6.2","depth":3,"path":"scp.md","ref":"scp.md","articles":[{"title":"参数","level":"1.9.6.2.1","depth":4,"path":"scp/can-shu.md","ref":"scp/can-shu.md","articles":[]}]},"previous":{"title":"rsync","level":"1.9.6.1","depth":3,"path":"rsync.md","ref":"rsync.md","articles":[{"title":"参数","level":"1.9.6.1.1","depth":4,"path":"rsync/can-shu.md","ref":"rsync/can-shu.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism-themes","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-hopscotch.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"prism-themes":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihui","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"designpatterns","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"rsync/can-shu.md","mtime":"2019-10-26T22:12:45.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-08T22:06:22.054Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"参数","level":"1.9.6.1.1","depth":4,"next":{"title":"scp","level":"1.9.6.2","depth":3,"path":"scp.md","ref":"scp.md","articles":[{"title":"参数","level":"1.9.6.2.1","depth":4,"path":"scp/can-shu.md","ref":"scp/can-shu.md","articles":[]}]},"previous":{"title":"rsync","level":"1.9.6.1","depth":3,"path":"rsync.md","ref":"rsync.md","articles":[{"title":"参数","level":"1.9.6.1.1","depth":4,"path":"rsync/can-shu.md","ref":"rsync/can-shu.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","back-to-top-button","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"back-to-top-button":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihuiit@163.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"shell","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"rsync/can-shu.md","mtime":"2019-10-26T22:12:45.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T02:28:41.932Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2399,6 +2420,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         

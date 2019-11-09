@@ -4,11 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>用户 · designpatterns</title>
+        <title>用户 · shell</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="baihui">
+        <meta name="author" content="baihuiit@163.com">
         
         
     
@@ -26,6 +26,10 @@
                 
             
                 
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-alerts/style.css">
                 
             
@@ -39,6 +43,10 @@
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
                 
             
                 
@@ -625,7 +633,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.1" data-path="wen-ben-fen-xi/awk.html">
+        <li class="chapter " data-level="1.4.14.1" data-path="sed.html">
+            
+                <a href="sed.html">
+            
+                    
+                    sed
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14.2" data-path="wen-ben-fen-xi/awk.html">
             
                 <a href="wen-ben-fen-xi/awk.html">
             
@@ -638,7 +659,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.14.2" data-path="grep.html">
+        <li class="chapter " data-level="1.4.14.3" data-path="grep.html">
             
                 <a href="grep.html">
             
@@ -652,7 +673,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.14.2.1" data-path="grep/or-and-andand.html">
+        <li class="chapter " data-level="1.4.14.3.1" data-path="grep/or-and-andand.html">
             
                 <a href="grep/or-and-andand.html">
             
@@ -2320,11 +2341,11 @@ graph TD;
 <h5 id="&#x7528;&#x6237;"><strong>&#x7528;&#x6237;</strong></h5>
 <ul>
 <li><p>&#x7528;&#x6237;&#x540D;&#x4EE5;&#x53CA;&#x73AF;&#x5883;&#x4FE1;&#x606F;&#x5B58;&#x653E;&#x5728;<strong>/etc/passwd</strong>&#x6587;&#x4EF6;&#x4E2D;,&#x6BCF;&#x4E00;&#x884C;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4EE5; &#x201C;:&#x201D;&#x5206;&#x5272;&#x4E0D;&#x540C;&#x4FE1;&#x606F;&#x5143;&#x7D20;</p>
-<pre><code class="lang-shell">#&#x7528;&#x6237;&#x540D;&#x79F0;:&#x5BC6;&#x7801;:UID:GID:&#x7528;&#x6237;&#x4FE1;&#x606F;&#x8BF4;&#x660E;:home&#x76EE;&#x5F55;:&#x9ED8;&#x8BA4;&#x7684;Shell
+<pre class="language-"><code class="lang-bash"><span class="token comment">#&#x7528;&#x6237;&#x540D;&#x79F0;:&#x5BC6;&#x7801;:UID:GID:&#x7528;&#x6237;&#x4FE1;&#x606F;&#x8BF4;&#x660E;:home&#x76EE;&#x5F55;:&#x9ED8;&#x8BA4;&#x7684;Shell</span>
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-...
+<span class="token punctuation">..</span>.
 </code></pre>
 <blockquote>
 <p>x&#x5BC6;&#x7801;,&#x5386;&#x53F2;&#x539F;&#x56E0;&#x73B0;&#x5728;&#x4E0D;&#x7528;&#xFF0C;&#x5BC6;&#x7801;&#x662F;&#x5728; /etc/shadow&#x6587;&#x4EF6;&#x4E2D;&#x4E86;,&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x56FA;&#x5B9A;&#x5199;x</p>
@@ -2333,7 +2354,7 @@ www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 </ul>
 <h5 id="&#x5BC6;&#x7801;">&#x5BC6;&#x7801;</h5>
 <p>&#x6587;&#x4EF6;&#x5728;/etc/shadow&#x4E2D;&#xFF0C;&#x6587;&#x4EF6;&#x4E2D;&#x6BCF;&#x884C;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x4FE1;&#x606F; , &#x6BCF;&#x884C;&#x7528; : &#x5206;&#x5272;&#x5F62;&#x6210;9&#x4E2A;&#x5217; ; &#x4EE5;&#x4E0B;&#x662F;&#x5404;&#x4E2A;&#x5217;&#x7684;&#x8BF4;&#x660E; :</p>
-<pre><code class="lang-shell">root:!:17983:0:99999:7:::
+<pre class="language-"><code class="lang-bash">root:<span class="token operator">!</span>:17983:0:99999:7:::
 daemon:*:17737:0:99999:7:::
 bin:*:17737:0:99999:7:::
 sys:*:17737:0:99999:7:::
@@ -2352,7 +2373,7 @@ sync:*:17737:0:99999:7:::
 </ol>
 <h5 id="&#x7528;&#x6237;&#x7EC4;"><strong>&#x7528;&#x6237;&#x7EC4;</strong></h5>
 <p>&#x7528;&#x6237;&#x7EC4;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5728; <code>/etc/group</code>&#x6587;&#x4EF6;&#x4E2D; , &#x53E6;&#x5916; <code>/etc/gshadow</code>&#x6587;&#x4EF6;&#x5B58;&#x653E;&#x7684;&#x662F;&#x7528;&#x6237;&#x7EC4;&#x5BC6;&#x7801;&#x76F8;&#x5173;&#x4FE1;&#x606F;</p>
-<pre><code class="lang-shell">root:x:0:
+<pre class="language-"><code class="lang-bash">root:x:0:
 daemon:x:1:
 bin:x:2:
 sys:x:3:
@@ -2362,7 +2383,7 @@ adm:x:4:syslog,baihui
 <p>&#x7B2C;&#x4E00;&#x5217;&#x4E3A;&#x7EC4;&#x540D;&#x79F0;<br>&#x7B2C;&#x4E8C;&#x5217;&#x4E3A;&#x7EC4;&#x5BC6;&#x7801; , &#x7EC4;&#x5BC6;&#x7801;&#x5DF2;&#x7ECF;&#x79FB;&#x52A8;&#x5230; /etc/gshadow &#x6587;&#x4EF6;&#x4E2D;&#x4E86; , &#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x56FA;&#x5B9A;&#x662F; x ;<br>&#x7B2C;&#x4E09;&#x5217;&#x662F; GID , &#x662F;&#x7528;&#x6237;&#x7EC4;&#x7684;&#x552F;&#x4E00; ID , /etc/passwd &#x7528;&#x6237;&#x4FE1;&#x606F;&#x4E2D;&#x7684;&#x7B2C;&#x56DB;&#x4E2A;&#x5B57;&#x6BB5;&#x5C31;&#x5BF9;&#x5E94;&#x4E8E;&#x8FD9;&#x91CC;&#x7684; GID ;<br>&#x7B2C;&#x56DB;&#x5217;&#x662F;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x7EC4;&#x4E0B;&#x7684;&#x7528;&#x6237;&#x540D;&#x79F0; , &#x591A;&#x4E2A;&#x7528;&#x6237;&#x540D;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x5272; , &#x5982;&#x679C;&#x60F3;&#x5C06;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x7EC4;&#x4E2D; , &#x5C31;&#x5728;&#x76EE;&#x6807;&#x7EC4;&#x8FD9;&#x4E00;&#x884C; , &#x6DFB;&#x52A0;&#x4E0A;&#x8FD9;&#x4E2A;&#x7528;&#x6237;&#x540D; ;</p>
 </blockquote>
 <p><code>/etc/gshadow</code>&#x7528;&#x6237;&#x7EC4;&#x5BC6;&#x7801;&#x4FE1;&#x606F;</p>
-<pre><code class="lang-shell">root:*::
+<pre class="language-"><code class="lang-bash">root:*::
 daemon:*::
 bin:*::
 sys:*::
@@ -2382,13 +2403,13 @@ adm:*::syslog,baihui
 <p>groupadd -g 888 ##&#x5EFA;&#x7ACB;&#x7528;&#x6237;&#x7EC4;&#x5E76;&#x6307;&#x5B9A;&#x7528;&#x6237;&#x7EC4;&#x7684;id</p>
 <p>groupdel ##&#x5220;&#x9664;&#x7528;&#x6237;&#x7EC4;</p>
 <p>&#x4F8B;&#x5982;&#xFF1A;&#x6DFB;&#x52A0;&#x5F53;&#x524D;&#x7528;&#x6237;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7EC4;</p>
-<pre><code class="lang-shell">cat /etc/group|grep &apos;docker&apos;
+<pre class="language-"><code class="lang-bash"><span class="token function">cat</span> /etc/group<span class="token operator">|</span><span class="token function">grep</span> <span class="token string">&apos;docker&apos;</span>
 docker:x:999:
 
-#&#x628A;&#x7528;&#x6237;&#x8FFD;&#x52A0;&#x5230;&#x67D0;&#x4E9B;&#x7EC4;&#x4E2D;&#xFF0C;&#x4EC5;&#x4E0E;-G&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;
-sudo usermod -aG docker ${USER}
+<span class="token comment">#&#x628A;&#x7528;&#x6237;&#x8FFD;&#x52A0;&#x5230;&#x67D0;&#x4E9B;&#x7EC4;&#x4E2D;&#xFF0C;&#x4EC5;&#x4E0E;-G&#x9009;&#x9879;&#x4E00;&#x8D77;&#x4F7F;&#x7528;</span>
+<span class="token function">sudo</span> <span class="token function">usermod</span> -aG docker <span class="token variable">${<span class="token environment constant">USER</span>}</span>
 
-cat /etc/group|grep &apos;docker&apos;
+<span class="token function">cat</span> /etc/group<span class="token operator">|</span><span class="token function">grep</span> <span class="token string">&apos;docker&apos;</span>
 docker:x:999:baihui
 </code></pre>
 
@@ -2434,7 +2455,7 @@ docker:x:999:baihui
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"用户","level":"1.8","depth":1,"next":{"title":"普通用户(500~60000)","level":"1.8.1","depth":2,"path":"yong-hu/pu-tong-yong-hu.md","ref":"yong-hu/pu-tong-yong-hu.md","articles":[]},"previous":{"title":"链","level":"1.7.2","depth":2,"path":"ufw/lian.md","ref":"ufw/lian.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism-themes","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-hopscotch.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"prism-themes":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihui","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"designpatterns","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"yong-hu.md","mtime":"2019-10-27T03:23:18.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-08T22:06:22.054Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"用户","level":"1.8","depth":1,"next":{"title":"普通用户(500~60000)","level":"1.8.1","depth":2,"path":"yong-hu/pu-tong-yong-hu.md","ref":"yong-hu/pu-tong-yong-hu.md","articles":[]},"previous":{"title":"链","level":"1.7.2","depth":2,"path":"ufw/lian.md","ref":"ufw/lian.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","mermaid-gb3","splitter","back-to-top-button","alerts","puml","-search","search-pro","terminal","splitter","expandable-chapters","-highlight","prism","fontsettings"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["Gitbook Use"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"mermaid-gb3":{},"back-to-top-button":{},"alerts":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"baihuiit@163.com","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"shell","language":"zh-hans","gitbook":"*","description":"一切皆为文件"},"file":{"path":"yong-hu.md","mtime":"2019-11-09T00:02:51.532Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-09T02:28:41.932Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -2454,6 +2475,10 @@ docker:x:999:baihui
     
         
         <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
