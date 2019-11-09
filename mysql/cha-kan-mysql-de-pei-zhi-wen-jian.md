@@ -8,13 +8,13 @@ which mysql
 
 显示出目录比如我的是下面这个
 
-```shell
+```bash
 /usr/bin/mysql
 ```
 
 接下来就可以针对这个目录通过一些命令查看配置文件在哪了，如下
 
-```shell
+```bash
 /usr/bin/mysql --verbose --help | grep -A 1 'Default options'
 
 ```
