@@ -1,6 +1,6 @@
 
 *.swn
-
+*.md
 .index.md.swo
 
 .index.md.swp
