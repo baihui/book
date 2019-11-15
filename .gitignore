@@ -1,0 +1,8 @@
+
+*.swn
+
+.index.md.swo
+
+.index.md.swp
+
+.publish.sh.swp
