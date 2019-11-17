@@ -3313,26 +3313,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><strong>&#x5FFD;&#x7565;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x63A5;&#x53E3;</strong></p>
+                                <p>AbstractAutowireCapableBeanFactory</p>
+<p><strong>&#x5FFD;&#x7565;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x6216;&#x8005;&#x63A5;&#x53E3;</strong></p>
 <blockquote>
 <p>&#x5728;<a href="configurablelistablebeanfactory.html">ConfigurableListableBeanFactory</a>&#x4E2D;&#x6CE8;&#x518C;ignoredDependencyTypes&#x548C;ignoredDependencyInterfaces&#xFF0C;&#x5728;&#x81EA;&#x52A8;&#x88C5;Bean&#x4F9D;&#x8D56;&#x5FFD;&#x7565;</p>
 </blockquote>
-<p><strong>createBean</strong></p>
-<pre><code class="lang-java"><span class="hljs-comment">//&#x901A;&#x8FC7;mbd.getBeanClassName &#x83B7;&#x53D6;class&#x65F6;&#xFF0C;&#x5148;&#x9A8C;&#x8BC1;className&#x662F;&#x5426;&#x662F;&#x8868;&#x8FBE;&#x5F0F;&#x4EE5;&#x53CA;BeanExpressionResolver&#x89E3;&#x6790;&#x503C;&#xFF0C;&#x6700;&#x540E;&#x901A;&#x8FC7;&#x7C7B;&#x52A0;&#x8F7D;&#x52A0;&#x8F7D;className&#x83B7;&#x53D6;Class</span>
-Class&lt;?&gt; beanClass = resolveBeanClass(mbd, beanName);
-
-<span class="hljs-comment">//&#x5B9E;&#x4F8B;&#x4E4B;&#x524D;&#x56DE;&#x8C03;&#x540E;&#x7F6E;&#x5904;&#x7406;InstantiationAwareBeanPostProcessord&#x7684;postProcessBeforeInstantiation&#x8FD4;&#x56DE;&#x5B9E;&#x4F8B;</span>
-Object bean = resolveBeforeInstantiation(beanName, mbdToUse);
-<span class="hljs-keyword">if</span> (bean != <span class="hljs-keyword">null</span>) {
-    <span class="hljs-keyword">return</span> bean;
-}
-
-<span class="hljs-comment">//&#x8C03;&#x7528;doCreateBean &#x521B;&#x5EFA;BeanWrapper&#x7C7B;&#x5B9E;&#x4F8B;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x548C;&#x5C5E;&#x6027;&#x88C5;&#x914D;</span>
-</code></pre>
-<blockquote>
-<p>&#x540E;&#x7F6E;&#x5668;<a href="../../beanpostprocessor/instantiationawarebeanpostprocessor.html">InstantiationAwareBeanPostProcessor</a></p>
-</blockquote>
-<p><strong>doCreateBean&#x521B;&#x5EFA;BeanWrapper&#x8FC7;&#x7A0B;</strong></p>
+<p><strong>createBean Bean&#x7684;&#x5B9E;&#x4F8B;</strong></p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x53EF;&#x4EE5;&#xFF0C;&#x5219;&#x901A;&#x8FC7;<a href="../../beanpostprocessor/instantiationawarebeanpostprocessor.html">InstantiationAwareBeanPostProcessor</a>&#x540E;&#x7F6E;&#x5668;&#x8FD4;&#x56DE;Bean&#x7684;&#x5B9E;&#x4F8B;
+<img src="http://www.plantuml.com/plantuml/svg/UDgjLCjksp0GlFChriX50XG3RMy26CHsOI27Da7HtdgXf7NCW2699MKZ_Vek9Jzas4Zbe3hOqZvcPqSZYbaL8gawpb7P9VyxUeFREzY7PsrqMqsuK5vL1WTLPKseOXV9AlxvhbwnUAsQN71URpWr0WHkbiivNm12_Blwzku2sv8mEBFfwXP6XI0k51qxtrcewuOTNDC_2Uju4TBFwmXkDKOMbk2d-nKG9F0j_BRmgJZ5d4YmhJ4fzRcOSD5qhSA1VfQdn9SavVGPuo6UzENSe7amoU8MVZZNLN_5bROwQcUpz3g6bTCm0CnEMEMZz3-VKNf2hmY_OLoxvd63HBh1KDxlRuMKgUF9XVX4hiOG70KfHurxi24g6xLAasPR7dC6LVhZqnnNZl2agRDcjs01UvVcOWJkACSyLYzOn-ki-mwSyjwydOirMqMaXoItClfFlrO_kJYkTCL7TxsdsIcjYNA_hd7EG-MztFdpb6wMNp-WHuQw9K8RsT2CFXsysKiIzAG64WXb3X1Ifgz405-4iIKBVJaVD6YRZoh0n7Ru7Se7JeV4bb5wk8vmYapEsAQeG1FmVtchSOl3UTsH5ty1uoWtk000"></p>
+</li>
+<li><p>doCreateBean &#x521B;&#x5EFA;Bean&#x7684;&#x5B9E;&#x4F8B;</p>
+</li>
+</ul>
 <pre><code class="lang-java"><span class="hljs-comment">//&#x5728;&#x521B;&#x5EFA;BeanWrapper&#x7C7B;&#x4E4B;&#x524D;&#xFF0C;&#x5148;&#x5B9E;&#x4F8B;&#x76EE;&#x6807;&#x5BF9;&#x8C61; </span>
 BeanWrapper instanceWrapper = <span class="hljs-keyword">null</span>;
 <span class="hljs-keyword">if</span> (instanceWrapper == <span class="hljs-keyword">null</span>) {
@@ -3460,7 +3453,7 @@ Object exposedObject = bean;
 </li>
 </ul>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; baihui.com 111 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-10-27 06:12:11
+2019-11-17 21:06:55
 </span></footer>
                                 
                                 </section>
@@ -3504,7 +3497,7 @@ Object exposedObject = bean;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AbstractAutowireCapableBeanFactory","level":"1.3.1.4.1","depth":4,"next":{"title":"DefaultListableBeanFactory","level":"1.3.1.4.1.1","depth":5,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","articles":[{"title":"bean名称创建","level":"1.3.1.4.1.1.1","depth":6,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","articles":[]}]},"previous":{"title":"AbstractBeanFactory","level":"1.3.1.4","depth":3,"path":"beanfactory/abstractbeanfactory.md","ref":"beanfactory/abstractbeanfactory.md","articles":[{"title":"AbstractAutowireCapableBeanFactory","level":"1.3.1.4.1","depth":4,"path":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","articles":[{"title":"DefaultListableBeanFactory","level":"1.3.1.4.1.1","depth":5,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","articles":[{"title":"bean名称创建","level":"1.3.1.4.1.1.1","depth":6,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"plugins":["github","puml","mermaid-gb3","tbfed-pagefooter","splitter","expandable-chapters-small","alerts"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © baihui.com 111","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"alerts":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","mtime":"2019-10-26T22:12:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-16T11:49:36.021Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AbstractAutowireCapableBeanFactory","level":"1.3.1.4.1","depth":4,"next":{"title":"DefaultListableBeanFactory","level":"1.3.1.4.1.1","depth":5,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","articles":[{"title":"bean名称创建","level":"1.3.1.4.1.1.1","depth":6,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","articles":[]}]},"previous":{"title":"AbstractBeanFactory","level":"1.3.1.4","depth":3,"path":"beanfactory/abstractbeanfactory.md","ref":"beanfactory/abstractbeanfactory.md","articles":[{"title":"AbstractAutowireCapableBeanFactory","level":"1.3.1.4.1","depth":4,"path":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","articles":[{"title":"DefaultListableBeanFactory","level":"1.3.1.4.1.1","depth":5,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory.md","articles":[{"title":"bean名称创建","level":"1.3.1.4.1.1.1","depth":6,"path":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","ref":"beanfactory/abstractbeanfactory/defaultlistablebeanfactory/beanming-cheng-chuang-jian.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"plugins":["github","puml","mermaid-gb3","tbfed-pagefooter","splitter","expandable-chapters-small","alerts"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © baihui.com 111","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"alerts":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"beanfactory/abstractbeanfactory/abstractautowirecapablebeanfactory.md","mtime":"2019-11-17T13:06:55.628Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-17T13:09:24.586Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
