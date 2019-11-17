@@ -3323,9 +3323,9 @@
 </ul>
 <h5 id="&#x5B50;&#x7C7B;">&#x5B50;&#x7C7B;</h5>
 <ul>
-<li><a href="childbeandefinition.md">ChildBeanDefinition</a>&#xFF1A;&#x5B50;BeanDefinition</li>
+<li><a href="abstractbeandefinition/childbeandefinition.html">ChildBeanDefinition</a>&#xFF1A;&#x5B50;BeanDefinition</li>
 <li><a href="abstractbeandefinition/rootbeandefinition.html">RootBeanDefinition</a>&#xFF1A;&#x7236;BeanDefinition</li>
-<li><a href="genericbeandefinition.md">GenericBeanDefinition</a>&#xFF1A;&#x901A;&#x7528;&#x6027;BeanDefinition</li>
+<li><a href="abstractbeandefinition/genericbeandefinition.html">GenericBeanDefinition</a>&#xFF1A;&#x901A;&#x7528;&#x6027;BeanDefinition</li>
 </ul>
 <p><img src="http://www.plantuml.com/plantuml/svg/UDgLK4jkmZ0GtViKiomBRj1D6YHMeAgSOEmCP2JZeVQacy3TSG05Y4XKbdxVUJPeaqPq2ivZIb3Sdb-4OK5R3gmieJMzx4-uWaJwZP62hd5F7x3Ho647XnwQtVKtRlVaUE1V5-Ph9D0pbbqdSxso8rQaMA5YeRd1Dag5SvIInDOS6klP0GU56bDTIjLLMX6VVK2_3VfqISiAYbjq1CEz_vmvikunkUoMeFNKPdYmylCudu_z09Z9bLDUqtTEgaQABvQoPb-zeVyHUIT-IO4Yku7Z32I6xTe0"></p>
 <blockquote>
@@ -3337,32 +3337,32 @@
 <ul>
 <li>hasBeanClass() &#x9A8C;&#x8BC1;&#x5F53;&#x524D;beanClass&#x662F;&#x5426;Class <code>(this.beanClass instanceof Class)</code></li>
 <li>prepareMethodOverrides() &#x68C0;&#x67E5;&#x662F;&#x5426;&#x6709;&#x91CD;&#x5199;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x6807;&#x8BB0;setOverloaded&#x3002;</li>
-<li>setOverloaded &#x6807;&#x8BB0;&#x5F53;&#x524D;Bean&#x7684;Class&#x662F;&#x5426;&#x6709;&#x91CD;&#x5199;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x907F;&#x514D;arg&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x7684;&#x5F00;&#x9500;
-``` java</li>
+<li>setOverloaded &#x6807;&#x8BB0;&#x5F53;&#x524D;Bean&#x7684;Class&#x662F;&#x5426;&#x6709;&#x91CD;&#x5199;&#x65B9;&#x6CD5;&#xFF0C;&#x4EE5;&#x907F;&#x514D;arg&#x7C7B;&#x578B;&#x68C0;&#x67E5;&#x7684;&#x5F00;&#x9500;</li>
 </ul>
-<p>//&#x8BBE;&#x7F6E;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x56DE;&#x8C03;&#x63A5;&#x53E3;
-public void setInstanceSupplier(@Nullable Supplier&lt;?&gt; instanceSupplier) {
-        this.instanceSupplier = instanceSupplier;
-    }</p>
-<p>//&#x6CE8;&#x518C;&#x7528;&#x4E8E;autowire&#x5019;&#x9009;&#x89E3;&#x6790;&#x7684;&#x9650;&#x5B9A;&#x7B26;&#xFF0C;&#x7531;&#x9650;&#x5B9A;&#x7B26;&#x7684;&#x7C7B;&#x578B;&#x540D;&#x79F0;&#x952E;&#x5165;
-public void addQualifier(AutowireCandidateQualifier qualifier) {
-        this.qualifiers.put(qualifier.getTypeName(), qualifier);
-    }</p>
-<p>@Override
-public Object clone() {
-    return cloneBeanDefinition();
-}</p>
-<p>//&#x662F;&#x5426;&#x662F;&#x5408;&#x6210;
-boolean synthetic 
-//&#x552F;&#x4E00;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;-&#x5B50;&#x7C7B;&#x5B9E;&#x73B0;&#x514B;&#x9686;
-public abstract AbstractBeanDefinition cloneBeanDefinition();</p>
-<p>```</p>
+<pre><code class="lang-java">
+<span class="hljs-comment">//&#x8BBE;&#x7F6E;&#x521B;&#x5EFA;&#x5B9E;&#x4F8B;&#x56DE;&#x8C03;&#x63A5;&#x53E3;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setInstanceSupplier</span><span class="hljs-params">(@Nullable Supplier&lt;?&gt; instanceSupplier)</span> </span>{
+        <span class="hljs-keyword">this</span>.instanceSupplier = instanceSupplier;
+    }
+<span class="hljs-comment">//&#x6CE8;&#x518C;&#x7528;&#x4E8E;autowire&#x5019;&#x9009;&#x89E3;&#x6790;&#x7684;&#x9650;&#x5B9A;&#x7B26;&#xFF0C;&#x7531;&#x9650;&#x5B9A;&#x7B26;&#x7684;&#x7C7B;&#x578B;&#x540D;&#x79F0;&#x952E;&#x5165;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addQualifier</span><span class="hljs-params">(AutowireCandidateQualifier qualifier)</span> </span>{
+        <span class="hljs-keyword">this</span>.qualifiers.put(qualifier.getTypeName(), qualifier);
+    }
+<span class="hljs-meta">@Override</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> Object <span class="hljs-title">clone</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-keyword">return</span> cloneBeanDefinition();
+}
+<span class="hljs-comment">//&#x662F;&#x5426;&#x662F;&#x5408;&#x6210;</span>
+<span class="hljs-keyword">boolean</span> synthetic 
+<span class="hljs-comment">//&#x552F;&#x4E00;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;-&#x5B50;&#x7C7B;&#x5B9E;&#x73B0;&#x514B;&#x9686;</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> AbstractBeanDefinition <span class="hljs-title">cloneBeanDefinition</span><span class="hljs-params">()</span></span>;
+</code></pre>
 <blockquote>
 <ul>
 <li>&#x5B9E;&#x73B0;&#x4E86;&#x6240;&#x6709;&#x63A5;&#x53E3;&#x65B9;&#x6CD5;&#xFF0C;&#x62BD;&#x8C61;&#x4E86;&#x514B;&#x9686;&#x65B9;&#x6CD5;</li>
-<li>&#x6CE8;&#x518C;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x56DE;&#x8C03;&#x63A5;&#x53E3;<a href="https://baihui.mynetgear.com:3389/book/java/supplier.html" target="_blank">Supplier</a></li>
+<li>&#x6CE8;&#x518C;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x56DE;&#x8C03;&#x63A5;&#x53E3;<a href="https://baihui.github.io/book/java/supplier.html" target="_blank">Supplier</a></li>
 <li><a href="beanmetadataelement/beanmetadataattributeaccessor/autowirecandidatequalifier.html">AutowireCandidateQualifier</a> &#x914D;&#x7F6E;&#x8BE5;bean&#x4F5C;&#x4E3A;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x5176;&#x5B83;bean&#x65F6;&#x6307;&#x5B9A;&#x7684;&#x9650;&#x5B9A;&#x540D;&#x79F0;</li>
-<li>&#x5B9E;&#x73B0;&#x4E86;&#x514B;&#x9686;&#x63A5;&#x53E3;<a href="https://baihui.mynetgear.com:3389/book/java/cloneable.html" target="_blank">Cloneable</a>
+<li>&#x5B9E;&#x73B0;&#x4E86;&#x514B;&#x9686;&#x63A5;&#x53E3;<a href="https://baihui.github.io/book/java/cloneable.html" target="_blank">Cloneable</a>
 ,&#x62BD;&#x8C61;&#x4E86;&#x514B;&#x9686;&#x8FC7;&#x7A0B;</li>
 </ul>
 </blockquote>
@@ -3371,7 +3371,7 @@ public abstract AbstractBeanDefinition cloneBeanDefinition();</p>
 <p>&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x5BB9;&#x5668;&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x529F;&#x80FD;&#x7684;&#x6838;&#x5FC3;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x529F;&#x80FD;&#x90FD;&#x662F;&#x56F4;&#x7ED5;&#x5BF9;&#x5B83;&#x7684;&#x5904;&#x7406;&#x6765;&#x5B8C;&#x6210;&#x7684; </p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; baihuiit.com  all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2019-11-17 19:27:35
+2019-11-17 21:40:03
 </span></footer>
                                 
                                 </section>
@@ -3415,7 +3415,7 @@ public abstract AbstractBeanDefinition cloneBeanDefinition();</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"AbstractBeanDefinition","level":"1.6.1","depth":2,"next":{"title":"RootBeanDefinition","level":"1.6.1.1","depth":3,"path":"beandefinition/abstractbeandefinition/rootbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition.md","articles":[{"title":"ConfigurationClassBeanDefinition","level":"1.6.1.1.1","depth":4,"path":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","articles":[]}]},"previous":{"title":"BeanDefinition","level":"1.6","depth":1,"path":"beandefinition.md","ref":"beandefinition.md","articles":[{"title":"AbstractBeanDefinition","level":"1.6.1","depth":2,"path":"beandefinition/abstractbeandefinition.md","ref":"beandefinition/abstractbeandefinition.md","articles":[{"title":"RootBeanDefinition","level":"1.6.1.1","depth":3,"path":"beandefinition/abstractbeandefinition/rootbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition.md","articles":[{"title":"ConfigurationClassBeanDefinition","level":"1.6.1.1.1","depth":4,"path":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","articles":[]}]},{"title":"ChildBeanDefinition","level":"1.6.1.2","depth":3,"path":"beandefinition/abstractbeandefinition/childbeandefinition.md","ref":"beandefinition/abstractbeandefinition/childbeandefinition.md","articles":[]},{"title":"GenericBeanDefinition","level":"1.6.1.3","depth":3,"path":"beandefinition/abstractbeandefinition/genericbeandefinition.md","ref":"beandefinition/abstractbeandefinition/genericbeandefinition.md","articles":[]}]},{"title":"AttributeAccessor","level":"1.6.2","depth":2,"path":"beandefinition/attributeaccessor.md","ref":"beandefinition/attributeaccessor.md","articles":[{"title":"AttributeAccessorSupport","level":"1.6.2.1","depth":3,"path":"beandefinition/attributeaccessor/attributeaccessorsupport.md","ref":"beandefinition/attributeaccessor/attributeaccessorsupport.md","articles":[]}]},{"title":"BeanMetadataElement","level":"1.6.3","depth":2,"path":"beandefinition/beanmetadataelement.md","ref":"beandefinition/beanmetadataelement.md","articles":[{"title":"BeanDefinitionHolder","level":"1.6.3.1","depth":3,"path":"beandefinition/beanmetadataelement/beandefinitionholder.md","ref":"beandefinition/beanmetadataelement/beandefinitionholder.md","articles":[]},{"title":"BeanMetadataAttributeAccessor","level":"1.6.3.2","depth":3,"path":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor.md","ref":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor.md","articles":[{"title":"AutowireCandidateQualifier","level":"1.6.3.2.1","depth":4,"path":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor/autowirecandidatequalifier.md","ref":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor/autowirecandidatequalifier.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"plugins":["github","puml","mermaid-gb3","tbfed-pagefooter","splitter","expandable-chapters-small","alerts"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © baihuiit.com ","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"alerts":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"beandefinition/abstractbeandefinition.md","mtime":"2019-11-17T11:27:35.482Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-17T13:23:52.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"AbstractBeanDefinition","level":"1.6.1","depth":2,"next":{"title":"RootBeanDefinition","level":"1.6.1.1","depth":3,"path":"beandefinition/abstractbeandefinition/rootbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition.md","articles":[{"title":"ConfigurationClassBeanDefinition","level":"1.6.1.1.1","depth":4,"path":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","articles":[]}]},"previous":{"title":"BeanDefinition","level":"1.6","depth":1,"path":"beandefinition.md","ref":"beandefinition.md","articles":[{"title":"AbstractBeanDefinition","level":"1.6.1","depth":2,"path":"beandefinition/abstractbeandefinition.md","ref":"beandefinition/abstractbeandefinition.md","articles":[{"title":"RootBeanDefinition","level":"1.6.1.1","depth":3,"path":"beandefinition/abstractbeandefinition/rootbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition.md","articles":[{"title":"ConfigurationClassBeanDefinition","level":"1.6.1.1.1","depth":4,"path":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","ref":"beandefinition/abstractbeandefinition/rootbeandefinition/configurationclassbeandefinition.md","articles":[]}]},{"title":"ChildBeanDefinition","level":"1.6.1.2","depth":3,"path":"beandefinition/abstractbeandefinition/childbeandefinition.md","ref":"beandefinition/abstractbeandefinition/childbeandefinition.md","articles":[]},{"title":"GenericBeanDefinition","level":"1.6.1.3","depth":3,"path":"beandefinition/abstractbeandefinition/genericbeandefinition.md","ref":"beandefinition/abstractbeandefinition/genericbeandefinition.md","articles":[]}]},{"title":"AttributeAccessor","level":"1.6.2","depth":2,"path":"beandefinition/attributeaccessor.md","ref":"beandefinition/attributeaccessor.md","articles":[{"title":"AttributeAccessorSupport","level":"1.6.2.1","depth":3,"path":"beandefinition/attributeaccessor/attributeaccessorsupport.md","ref":"beandefinition/attributeaccessor/attributeaccessorsupport.md","articles":[]}]},{"title":"BeanMetadataElement","level":"1.6.3","depth":2,"path":"beandefinition/beanmetadataelement.md","ref":"beandefinition/beanmetadataelement.md","articles":[{"title":"BeanDefinitionHolder","level":"1.6.3.1","depth":3,"path":"beandefinition/beanmetadataelement/beandefinitionholder.md","ref":"beandefinition/beanmetadataelement/beandefinitionholder.md","articles":[]},{"title":"BeanMetadataAttributeAccessor","level":"1.6.3.2","depth":3,"path":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor.md","ref":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor.md","articles":[{"title":"AutowireCandidateQualifier","level":"1.6.3.2.1","depth":4,"path":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor/autowirecandidatequalifier.md","ref":"beandefinition/beanmetadataelement/beanmetadataattributeaccessor/autowirecandidatequalifier.md","articles":[]}]}]}]},"dir":"ltr"},"config":{"plugins":["github","puml","mermaid-gb3","tbfed-pagefooter","splitter","expandable-chapters-small","alerts"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright © baihuiit.com ","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/baihui"},"puml":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"alerts":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"beandefinition/abstractbeandefinition.md","mtime":"2019-11-17T13:40:03.167Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-17T13:42:43.869Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
