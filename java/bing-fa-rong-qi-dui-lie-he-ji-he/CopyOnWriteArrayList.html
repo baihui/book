@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Member · GitBook</title>
+        <title>CopyOnWriteArrayList · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="field.html" />
+    <link rel="next" href="../locksupport.html" />
     
     
-    <link rel="prev" href="method.html" />
+    <link rel="prev" href="concurrenthashmap.html" />
     
 
     </head>
@@ -421,9 +421,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="../bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.html">
+        <li class="chapter " data-level="1.12.1" data-path="concurrenthashmap.html">
             
-                <a href="../bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.html">
+                <a href="concurrenthashmap.html">
             
                     
                     ConcurrentHashMap
@@ -434,9 +434,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.2" data-path="../bing-fa-rong-qi-dui-lie-he-ji-he/CopyOnWriteArrayList.html">
+        <li class="chapter active" data-level="1.12.2" data-path="CopyOnWriteArrayList.html">
             
-                <a href="../bing-fa-rong-qi-dui-lie-he-ji-he/CopyOnWriteArrayList.html">
+                <a href="CopyOnWriteArrayList.html">
             
                     
                     CopyOnWriteArrayList
@@ -609,9 +609,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.24.1" data-path="constructor.html">
+        <li class="chapter " data-level="1.24.1" data-path="../fan-she/constructor.html">
             
-                <a href="constructor.html">
+                <a href="../fan-she/constructor.html">
             
                     
                     Constructor
@@ -622,9 +622,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24.2" data-path="method.html">
+        <li class="chapter " data-level="1.24.2" data-path="../fan-she/method.html">
             
-                <a href="method.html">
+                <a href="../fan-she/method.html">
             
                     
                     Method
@@ -635,9 +635,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.24.3" data-path="member.html">
+        <li class="chapter " data-level="1.24.3" data-path="../fan-she/member.html">
             
-                <a href="member.html">
+                <a href="../fan-she/member.html">
             
                     
                     Member
@@ -648,9 +648,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.24.4" data-path="field.html">
+        <li class="chapter " data-level="1.24.4" data-path="../fan-she/field.html">
             
-                <a href="field.html">
+                <a href="../fan-she/field.html">
             
                     
                     Field
@@ -960,7 +960,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Member</a>
+        <a href=".." >CopyOnWriteArrayList</a>
     </h1>
 </div>
 
@@ -975,20 +975,38 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Member&#x662F;&#x53CD;&#x6620;Class&#x4E2D;&#x5355;&#x4E2A;&#x6210;&#x5458;&#xFF08;&#x5B57;&#x6BB5;&#x6216;<a href="method.html">Method</a>&#xFF09;&#x6216;<a href="constructor.html">&#x6784;&#x9020;&#x51FD;&#x6570;</a>&#x7684;&#x6807;&#x8BC6;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x53E3;</p>
-<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Member</span> </span>{
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> PUBLIC = <span class="hljs-number">0</span>;
+                                <p>CopyOnWriteArrayList&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x79CD;&#x53EB;&#x5199;&#x65F6;&#x590D;&#x5236;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5F53;&#x6709;&#x65B0;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;CopyOnWriteArrayList&#x65F6;&#xFF0C;add&#x6216;&#x8005;remove&#x4E0A;&#x52A0;&#x5165;&#x4E86;&#x91CD;&#x5165;&#x9501;&#xFF0C;&#x800C;&#x540E;&#x4ECE;&#x539F;&#x6709;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x51FA;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x505A;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x5199;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x5C06;&#x539F;&#x6765;&#x7684;&#x6570;&#x7EC4;&#x5F15;&#x7528;&#x6307;&#x5411;&#x5230;&#x65B0;&#x6570;&#x7EC4;&#x3002;</p>
+<pre><code class="lang-java">
+ <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">add</span><span class="hljs-params">(E e)</span> </span>{
+        <span class="hljs-keyword">final</span> ReentrantLock lock = <span class="hljs-keyword">this</span>.lock;
+        lock.lock();
+        <span class="hljs-keyword">try</span> {
 
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> DECLARED = <span class="hljs-number">1</span>;
-    <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x8C01;&#x58F0;&#x660E;&#x4E86;&#x8BE5;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x65B9;&#x6CD5;&#x7684;Class</span>
-    <span class="hljs-keyword">public</span> Class&lt;?&gt; getDeclaringClass();
-    <span class="hljs-comment">//&#x540D;&#x79F0;</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-comment">//&#x4EE5;&#x6574;&#x6570;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x6B64;Member&#x8868;&#x793A;&#x7684;&#x6210;&#x5458;&#x6216;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;Java&#x8BED;&#x8A00;&#x4FEE;&#x9970;&#x7B26;&#x3002; &#x5E94;&#x4F7F;&#x7528;Modifier&#x7C7B;&#x6765;&#x89E3;&#x7801;&#x6574;&#x6570;&#x4E2D;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#x3002;</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getModifiers</span><span class="hljs-params">()</span></span>;
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isSynthetic</span><span class="hljs-params">()</span></span>;
-}
+            <span class="hljs-comment">//&#x539F;&#x59CB;&#x6570;&#x7EC4;    </span>
+            Object[] elements = getArray();
+            <span class="hljs-comment">//&#x539F;&#x59CB;&#x5927;&#x5C0F;</span>
+            <span class="hljs-keyword">int</span> len = elements.length;
+
+            <span class="hljs-comment">//&#x590D;&#x5236;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x5230;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x957F;&#x5EA6;&#x52A0;1&#xFF08;&#x7ED9;&#x5F85;&#x6DFB;&#x52A0;&#x7684;&#x5143;&#x7D20;&#x9884;&#x7559;&#x7A7A;&#x95F4;&#xFF09;</span>
+            Object[] newElements = Arrays.copyOf(elements, len + <span class="hljs-number">1</span>);
+            <span class="hljs-comment">//&#x6DFB;&#x52A0;&#x5143;&#x7D20;</span>
+            newElements[len] = e;
+            <span class="hljs-comment">//&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x5F15;&#x7528;&#x6307;&#x5411;&#x65B0;&#x7684;</span>
+            setArray(newElements);
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        } <span class="hljs-keyword">finally</span> {
+            lock.unlock();
+        }
+    }
 </code></pre>
+<ul>
+<li><p>get &#x8BFB;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x9501;&#xFF0C;&#x5982;&#x679C;&#x8BFB;&#x7684;&#x65F6;&#x5019;&#x6709;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x6B63;&#x5728;&#x5411;ArrayList&#x6DFB;&#x52A0;&#x6570;&#x636E;&#xFF0C;&#x8BFB;&#x8FD8;&#x662F;&#x4F1A;&#x8BFB;&#x5230;&#x65E7;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5199;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x9501;&#x4F4F;&#x65E7;&#x7684;ArrayList&#x3002;</p>
+</li>
+<li><p>CopyOnWrite&#x7684;&#x7F3A;&#x70B9;
+CopyOnWrite&#x5BB9;&#x5668;&#x6709;&#x5F88;&#x591A;&#x4F18;&#x70B9;&#xFF0C;&#x4F46;&#x662F;&#x540C;&#x65F6;&#x4E5F;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x5373;&#x5185;&#x5B58;&#x5360;&#x7528;&#x95EE;&#x9898;&#xFF08;&#x4F1A;&#x6709;&#x65E7;&#x6570;&#x636E;&#x548C;&#x65B0;&#x6570;&#x636E;&#xFF09;&#x548C;&#x6570;&#x636E;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;&#x53EA;&#x80FD;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x6700;&#x7EC8;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x4E0D;&#x80FD;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x5B9E;&#x65F6;&#x4E00;&#x81F4;&#x6027;&#x3002;
+&#xFF08;&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;200M&#x5DE6;&#x53F3;&#xFF0C;&#x90A3;&#x4E48;&#x518D;&#x5199;&#x5165;100M&#x6570;&#x636E;&#x8FDB;&#x53BB;&#xFF0C;&#x5185;&#x5B58;&#x5C31;&#x4F1A;&#x5360;&#x7528;300M&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5F88;&#x6709;&#x53EF;&#x80FD;&#x9020;&#x6210;&#x9891;&#x7E41;&#x7684;Yong GC&#x548C;Full GC&#x3002;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x7CFB;&#x7EDF;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x7531;&#x4E8E;&#x6BCF;&#x665A;&#x4F7F;&#x7528;CopyOnWrite&#x673A;&#x5236;&#x66F4;&#x65B0;&#x5927;&#x5BF9;&#x8C61;&#xFF0C;&#x9020;&#x6210;&#x4E86;&#x6BCF;&#x665A;15&#x79D2;&#x7684;Full GC&#xFF0C;&#x5E94;&#x7528;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x4E5F;&#x968F;&#x4E4B;&#x53D8;&#x957F;&#x3002;&#xFF09;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -1016,12 +1034,12 @@
 
             
                 
-                <a href="method.html" class="navigation navigation-prev " aria-label="Previous page: Method">
+                <a href="concurrenthashmap.html" class="navigation navigation-prev " aria-label="Previous page: ConcurrentHashMap">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="field.html" class="navigation navigation-next " aria-label="Next page: Field">
+                <a href="../locksupport.html" class="navigation navigation-next " aria-label="Next page: LockSupport">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1032,7 +1050,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Member","level":"1.24.3","depth":2,"next":{"title":"Field","level":"1.24.4","depth":2,"path":"fan-she/field.md","ref":"fan-she/field.md","articles":[]},"previous":{"title":"Method","level":"1.24.2","depth":2,"path":"fan-she/method.md","ref":"fan-she/method.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"fan-she/member.md","mtime":"2019-10-26T22:11:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T02:02:15.331Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CopyOnWriteArrayList","level":"1.12.2","depth":2,"next":{"title":"LockSupport","level":"1.13","depth":1,"path":"locksupport.md","ref":"locksupport.md","articles":[]},"previous":{"title":"ConcurrentHashMap","level":"1.12.1","depth":2,"path":"bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.md","ref":"bing-fa-rong-qi-dui-lie-he-ji-he/concurrenthashmap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"bing-fa-rong-qi-dui-lie-he-ji-he/CopyOnWriteArrayList.md","mtime":"2019-11-18T01:59:55.137Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-18T02:02:15.331Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

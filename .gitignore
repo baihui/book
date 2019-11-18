@@ -1,8 +1,8 @@
 
 *.swn
 *.md
-.index.md.swo
-
-.index.md.swp
+*.swo
+.*
+*.swp
 
 .publish.sh.swp
